@@ -14,6 +14,7 @@ namespace Feeder.Infrastructure
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
             serviceCollection.AddScoped<IRssRepository, RssRepository>();
             serviceCollection.AddScoped<RssService>();
+            serviceCollection.AddScoped<SourceService>();
         }
     }
 }

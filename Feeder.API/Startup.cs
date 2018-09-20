@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Feeder.DAL;
 using Feeder.Infrastructure;
+using Freeder.BLL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -25,10 +26,12 @@ namespace Feeder
                 .AddJsonFile("appsettings.json");
 
             Configuration = builder.Build();
+            autoMapperInitializatior = new AutoMapperInitializatior();
         }
 
         public IConfiguration Configuration { get; }
         private DependencyResolver dependencyResolver;
+        private AutoMapperInitializatior autoMapperInitializatior;
 
         public void ConfigureServices(IServiceCollection services)
         {

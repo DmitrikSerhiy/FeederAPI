@@ -19,6 +19,7 @@ namespace Feeder.DAL
         //  }
 
         public DbSet<Rss> Rsses { get; set; }
+        public DbSet<Source> Sources { get; set; }
         public FeedContext(DbContextOptions<FeedContext> options)
             : base(options)
         {

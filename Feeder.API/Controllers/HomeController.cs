@@ -10,6 +10,7 @@ namespace Feeder.Controllers
 {
     // [Produces("application/json")]
     [Route("api/feed")]
+    [ApiController]
     public class HomeController : ControllerBase
     {
         private RssService rssService;
