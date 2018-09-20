@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Feeder.DAL\Feeder.DAL.csproj" />
     <ProjectReference Include="..\Freeder.BLL\Freeder.BLL.csproj" />
   </ItemGroup>
 
