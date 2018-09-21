@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Feeder
 {
@@ -35,7 +36,15 @@ namespace Feeder
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "logger.txt");
+
             dependencyResolver = new DependencyResolver(services);
+
+
+            var logerFactory = new LoggerFactory();
+            logerFactory.AddProvider(new LoggerProvider(path));
+            services.AddSingleton<ILoggerFactory>(logerFactory);
+
 
             services.AddDbContext<FeedContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -43,18 +52,12 @@ namespace Feeder
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseMvc();
-            //    (routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller=Home}/{action=GetRssFeed}");
-            //});
         }
     }
 }

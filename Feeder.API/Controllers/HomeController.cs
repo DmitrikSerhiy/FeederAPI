@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Freeder.BLL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Feeder.Controllers
 {
@@ -14,15 +11,22 @@ namespace Feeder.Controllers
     public class HomeController : ControllerBase
     {
         private RssService rssService;
-        public HomeController(RssService RssService)
+        private SourceService sourceService;
+        private readonly ILogger logger;
+
+        public HomeController(RssService RssService, SourceService SourceService,
+            ILoggerFactory LoggerFactory)
         {
             rssService = RssService;
+            sourceService = SourceService;
+            logger = LoggerFactory.CreateLogger<HomeController>();
+
         }
 
         [HttpGet("{Id}", Name = "GetFeed")]
         public ActionResult GetRssFeed(int Id)
         {
-            var feed = rssService.GetFeed(Id);
+             var feed = rssService.GetFeed(Id);
 
             if (feed != null) return Ok(feed);
             return NotFound();

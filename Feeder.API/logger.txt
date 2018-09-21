@@ -1,0 +1,410 @@
+Request starting HTTP/1.1 GET http://localhost:44399/api/source  
+All hosts are allowed.
+The request path /api/source does not match a supported file type
+Request successfully matched the route with name 'GetSources' and template 'api/Source'.
+Action 'Feeder.API.Controllers.SourceController.AddSource (Feeder.API)' with id 'd0aa413e-6249-4ca4-af18-ac11021c2ab2' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Route matched with {action = "GetSources", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.GetSources (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (136ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.GetSources (Feeder.API) - Validation state: Valid
+Compiling query model: 
+'from Source <generated>_0 in DbSet<Source>
+select [<generated>_0]'
+Optimized query model: 
+'from Source <generated>_0 in DbSet<Source>
+select [<generated>_0]'
+(QueryContext queryContext) => IEnumerable<Source> _InterceptExceptions(
+|__ source: IEnumerable<Source> _TrackEntities(
+|   |__ results: IEnumerable<Source> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT [s].[Id], [s].[Name], [s].[Url]
+|   |   |       FROM [Sources] AS [s], 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new Source()
+|   |           instance.<Id>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, Source.Id)
+|   |           instance.<Name>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, Source.Name)
+|   |           instance.<Url>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, Source.Url)
+|   |           return instance
+|   |       }), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: Source }, 
+|   |__ entityAccessors: List<Func<Source, object>> 
+|       { 
+|           Func<Source, Source>, 
+|       }), 
+|__ contextType: Feeder.DAL.FeedContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[Url]
+FROM [Sources] AS [s]
+Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[Url]
+FROM [Sources] AS [s]
+Context 'FeedContext' started tracking 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'FeedContext' started tracking 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Sources: Wall Street Journal, The New York Times
+Executed action method Feeder.API.Controllers.SourceController.GetSources (Feeder.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 365.0794ms.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter
+No information found on request to perform content negotiation.
+Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+Attempting to select the first formatter in the output formatters list which can write the result.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Feeder.DAL.Models.Source, Feeder.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Executed action Feeder.API.Controllers.SourceController.GetSources (Feeder.API) in 2246.4867ms
+Connection id "0HLH007Q97RHJ" completed keep alive response.
+'FeedContext' disposed.
+Request finished in 2311.0896ms 200 application/json; charset=utf-8
+Hosting starting
+User profile is available. Using 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-83b639e4-1733-4202-adb0-91e6f3317fa6.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-df4ff1d4-0252-46bd-9589-d14a00bb5850.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-f98209b9-f5a7-4f87-80d0-133b6d428d3b.xml'.
+Found key {83b639e4-1733-4202-adb0-91e6f3317fa6}.
+Found key {df4ff1d4-0252-46bd-9589-d14a00bb5850}.
+Found key {f98209b9-f5a7-4f87-80d0-133b6d428d3b}.
+Considering key {df4ff1d4-0252-46bd-9589-d14a00bb5850} with expiration date 2018-12-18 13:30:28Z as default key.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Decrypting secret element using Windows DPAPI.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+Using key {df4ff1d4-0252-46bd-9589-d14a00bb5850} as the default key.
+Key ring with default key {df4ff1d4-0252-46bd-9589-d14a00bb5850} was loaded during application startup.
+Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False
+Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False
+Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False
+Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False
+Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions
+Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False
+Compatibility switch AllowAreas in type RazorPagesOptions is using default value False
+Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False
+Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False
+Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+Failed to locate the development https certificate at '(null)'.
+Hosting started
+Loaded hosting startup assembly Feeder.API
+Loaded hosting startup assembly Microsoft.AspNetCore.Server.IISIntegration
+Connection id "0HLH00974VHQ8" started.
+Connection id "0HLH00974VHQ9" started.
+Request starting HTTP/1.1 DEBUG http://localhost:63376/  0
+Request starting HTTP/1.1 GET http://localhost:44399/  
+Wildcard detected, all requests with hosts will be allowed.
+Wildcard detected, all requests with hosts will be allowed.
+All hosts are allowed.
+All hosts are allowed.
+Connection id "0HLH00974VHQ8" completed keep alive response.
+Request finished in 46.4903ms 200 
+The request path / does not match a supported file type
+Request did not match any routes.
+Connection id "0HLH00974VHQ9" completed keep alive response.
+Request finished in 194.8009ms 404 
+Request starting HTTP/1.1 GET http://localhost:44399/api/source/The New York Times  
+All hosts are allowed.
+The request path /api/source/The New York Times does not match a supported file type
+Request successfully matched the route with name 'GetSource' and template 'api/Source/{Name}'.
+Route matched with {action = "GetSource", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.GetSource (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (124ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Attempting to bind parameter 'Name' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Name' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Name'.
+Done attempting to bind parameter 'Name' of type 'System.String'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.GetSource (Feeder.API) with arguments (The New York Times) - Validation state: Valid
+Compiling query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).FirstOrDefault()'
+Optimized query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).FirstOrDefault()'
+(QueryContext queryContext) => IEnumerable<Source> _InterceptExceptions(
+|__ source: IEnumerable<Source> _TrackEntities(
+|   |__ results: IEnumerable<Source> _ToSequence(() => Source FirstOrDefault(IEnumerable<Source> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT TOP(1) [s].[Id], [s].[Name], [s].[Url]
+|   |   |       FROM [Sources] AS [s]
+|   |   |       WHERE [s].[Name] = @__Name_0, 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new Source()
+|   |           instance.<Id>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, Source.Id)
+|   |           instance.<Name>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, Source.Name)
+|   |           instance.<Url>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, Source.Url)
+|   |           return instance
+|   |       }))), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: Source }, 
+|   |__ entityAccessors: List<Func<Source, object>> 
+|       { 
+|           Func<Source, Source>, 
+|       }), 
+|__ contextType: Feeder.DAL.FeedContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Name] = @__Name_0
+Executed DbCommand (71ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Name] = @__Name_0
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Context 'FeedContext' started tracking 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Source The New York Times
+Executed action method Feeder.API.Controllers.SourceController.GetSource (Feeder.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 494.8312ms.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter
+No information found on request to perform content negotiation.
+Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+Attempting to select the first formatter in the output formatters list which can write the result.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value of type 'Feeder.DAL.Models.Source'.
+After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Executed action Feeder.API.Controllers.SourceController.GetSource (Feeder.API) in 2385.3181ms
+Connection id "0HLH00974VHQ8" completed keep alive response.
+'FeedContext' disposed.
+Request finished in 2444.9378ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:44399/api/source?Name=The%20New%20York%20Times&Url=http://rss.nytimes.com/services/xml/rss/nyt/US.xml  0
+All hosts are allowed.
+POST requests are not supported
+Request successfully matched the route with name 'GetSources' and template 'api/Source'.
+Action 'Feeder.API.Controllers.SourceController.GetSources (Feeder.API)' with id '74666bba-37a1-4247-960e-810a203abe8c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Route matched with {action = "AddSource", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.AddSource (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Attempting to bind parameter 'Name' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Name' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Name'.
+Done attempting to bind parameter 'Name' of type 'System.String'.
+Attempting to bind parameter 'Url' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Url' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Url'.
+Done attempting to bind parameter 'Url' of type 'System.String'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.AddSource (Feeder.API) with arguments (The New York Times, http://rss.nytimes.com/services/xml/rss/nyt/US.xml) - Validation state: Valid
+Compiling query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+Optimized query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+(QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+|__ source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+|   |__ valueBuffers: IEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |           SELECT CASE
+|   |               WHEN EXISTS (
+|   |                   SELECT 1
+|   |                   FROM [Sources] AS [s]
+|   |                   WHERE [s].[Name] = @__Name_0)
+|   |               THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+|   |           END), 
+|   |__ throwOnNullResult: False)), 
+|__ contextType: Feeder.DAL.FeedContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Executed DbCommand (24ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Executed action Feeder.API.Controllers.SourceController.AddSource (Feeder.API) in 15896.9539ms
+Connection id "0HLH00974VHQ9", Request id "0HLH00974VHQ9:00000002": An unhandled exception was thrown by the application.
+Connection id "0HLH00974VHQ9" completed keep alive response.
+'FeedContext' disposed.
+Request finished in 15921.1486ms 500 
+Request starting HTTP/1.1 GET http://localhost:44399/api/source/The New York Time  
+All hosts are allowed.
+The request path /api/source/The New York Time does not match a supported file type
+Request successfully matched the route with name 'GetSource' and template 'api/Source/{Name}'.
+Route matched with {action = "GetSource", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.GetSource (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Attempting to bind parameter 'Name' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Name' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Name'.
+Done attempting to bind parameter 'Name' of type 'System.String'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.GetSource (Feeder.API) with arguments (The New York Time) - Validation state: Valid
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Name] = @__Name_0
+Executed DbCommand (18ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[Url]
+FROM [Sources] AS [s]
+WHERE [s].[Name] = @__Name_0
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Source 
+Executed action method Feeder.API.Controllers.SourceController.GetSource (Feeder.API), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 27.1691ms.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Before executing action result Microsoft.AspNetCore.Mvc.NotFoundResult.
+Executing HttpStatusCodeResult, setting HTTP status code 404
+After executing action result Microsoft.AspNetCore.Mvc.NotFoundResult.
+Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Executed action Feeder.API.Controllers.SourceController.GetSource (Feeder.API) in 85.4282ms
+Connection id "0HLH00974VHQ8" completed keep alive response.
+'FeedContext' disposed.
+Request finished in 93.6728ms 404 
