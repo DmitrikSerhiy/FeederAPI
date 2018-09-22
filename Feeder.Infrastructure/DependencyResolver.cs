@@ -11,9 +11,9 @@ namespace Feeder.Infrastructure
         public DependencyResolver(IServiceCollection serviceCollection)
         {
             serviceCollection.AddScoped<FeedContext>();
-            serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
-            serviceCollection.AddScoped<IRssRepository, RssRepository>();
-            serviceCollection.AddScoped<RssService>();
+            //serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
+            serviceCollection.AddScoped<IFeedRepository, FeedRepository>();
+            serviceCollection.AddScoped<FeedService>();
             serviceCollection.AddScoped<SourceService>();
         }
     }

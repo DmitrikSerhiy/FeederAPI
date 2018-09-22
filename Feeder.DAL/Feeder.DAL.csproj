@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <Compile Remove="Migrations\20180922090910_NullableCollectionId.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -408,3 +408,2408 @@ Executed action Feeder.API.Controllers.SourceController.GetSource (Feeder.API) i
 Connection id "0HLH00974VHQ8" completed keep alive response.
 'FeedContext' disposed.
 Request finished in 93.6728ms 404 
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+The property 'SourceId' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+The property 'CollectionId' on entity type 'Source' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (73ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+The property 'SourceId' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+The property 'CollectionId' on entity type 'Source' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+The property 'SourceId' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+The property 'CollectionId' on entity type 'Source' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (67ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (71ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (83ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (84ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (71ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Migrating using database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Applying migration '20180921222417_TPH_Pattern'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Rsses] DROP CONSTRAINT [PK_Rsses];
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Rsses] DROP CONSTRAINT [PK_Rsses];
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Rsses]', N'Feeds';
+Executed DbCommand (136ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Rsses]', N'Feeds';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Title]', N'Updated', N'COLUMN';
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Title]', N'Updated', N'COLUMN';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Link]', N'Author', N'COLUMN';
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Link]', N'Author', N'COLUMN';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD [CollectionId] int NOT NULL DEFAULT 0;
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD [CollectionId] int NOT NULL DEFAULT 0;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [Discriminator] nvarchar(max) NOT NULL DEFAULT N'';
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [Discriminator] nvarchar(max) NOT NULL DEFAULT N'';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [SourceId] int NOT NULL DEFAULT 0;
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [SourceId] int NOT NULL DEFAULT 0;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE;
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE;
+Failed executing DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE;
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (71ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Migrating using database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Applying migration '20180921222417_TPH_Pattern'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Rsses] DROP CONSTRAINT [PK_Rsses];
+Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Rsses] DROP CONSTRAINT [PK_Rsses];
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Rsses]', N'Feeds';
+Executed DbCommand (112ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Rsses]', N'Feeds';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Title]', N'Updated', N'COLUMN';
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Title]', N'Updated', N'COLUMN';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Link]', N'Author', N'COLUMN';
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Link]', N'Author', N'COLUMN';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD [CollectionId] int NOT NULL DEFAULT 0;
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD [CollectionId] int NOT NULL DEFAULT 0;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [Discriminator] nvarchar(max) NOT NULL DEFAULT N'';
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [Discriminator] nvarchar(max) NOT NULL DEFAULT N'';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [SourceId] int NOT NULL DEFAULT 0;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [SourceId] int NOT NULL DEFAULT 0;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE;
+Failed executing DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE;
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+The property 'Discriminator' on entity type 'Feed' was created in shadow state because there are no eligible CLR members with a matching name.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Migrating using database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Applying migration '20180921222417_TPH_Pattern'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Rsses] DROP CONSTRAINT [PK_Rsses];
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Rsses] DROP CONSTRAINT [PK_Rsses];
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Rsses]', N'Feeds';
+Executed DbCommand (104ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Rsses]', N'Feeds';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Title]', N'Updated', N'COLUMN';
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Title]', N'Updated', N'COLUMN';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Link]', N'Author', N'COLUMN';
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Feeds].[Link]', N'Author', N'COLUMN';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD [CollectionId] int NOT NULL DEFAULT 0;
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD [CollectionId] int NOT NULL DEFAULT 0;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [Discriminator] nvarchar(max) NOT NULL DEFAULT N'';
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [Discriminator] nvarchar(max) NOT NULL DEFAULT N'';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [SourceId] int NOT NULL DEFAULT 0;
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD [SourceId] int NOT NULL DEFAULT 0;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE;
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Feeds] ADD CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE;
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Sources] ADD CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE;
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20180921222417_TPH_Pattern', N'2.2.0-preview2-35157');
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20180921222417_TPH_Pattern', N'2.2.0-preview2-35157');
+Committing transaction.
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (65ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (57ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (52ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Sources] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Url] nvarchar(max) NULL,
+    [CollectionId] int NOT NULL,
+    CONSTRAINT [PK_Sources] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Sources] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Url] nvarchar(max) NULL,
+    [CollectionId] int NOT NULL,
+    CONSTRAINT [PK_Sources] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Feeds] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] int NOT NULL,
+    [Author] nvarchar(max) NULL,
+    [PublishDate] nvarchar(max) NULL,
+    [Content] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [SourceId] int NOT NULL,
+    CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Feeds] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] int NOT NULL,
+    [Author] nvarchar(max) NULL,
+    [PublishDate] nvarchar(max) NULL,
+    [Content] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [SourceId] int NOT NULL,
+    CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Committing transaction.
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Migrating using database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Applying migration '20180921225212_FixFeedEntity'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Failed executing DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Sources] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Url] nvarchar(max) NULL,
+    [CollectionId] int NOT NULL,
+    CONSTRAINT [PK_Sources] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Sources] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Url] nvarchar(max) NULL,
+    [CollectionId] int NOT NULL,
+    CONSTRAINT [PK_Sources] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Feeds] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] int NOT NULL,
+    [Author] nvarchar(max) NULL,
+    [PublishDate] nvarchar(max) NULL,
+    [Content] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [SourceId] int NOT NULL,
+    CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Feeds] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] int NOT NULL,
+    [Author] nvarchar(max) NULL,
+    [PublishDate] nvarchar(max) NULL,
+    [Content] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [SourceId] int NOT NULL,
+    CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Committing transaction.
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (72ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Migrating using database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Applying migration '20180921225436_FixFeedEntity'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Failed executing DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+Hosting starting
+User profile is available. Using 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-83b639e4-1733-4202-adb0-91e6f3317fa6.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-df4ff1d4-0252-46bd-9589-d14a00bb5850.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-f98209b9-f5a7-4f87-80d0-133b6d428d3b.xml'.
+Found key {83b639e4-1733-4202-adb0-91e6f3317fa6}.
+Found key {df4ff1d4-0252-46bd-9589-d14a00bb5850}.
+Found key {f98209b9-f5a7-4f87-80d0-133b6d428d3b}.
+Considering key {df4ff1d4-0252-46bd-9589-d14a00bb5850} with expiration date 2018-12-18 13:30:28Z as default key.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Decrypting secret element using Windows DPAPI.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+Using key {df4ff1d4-0252-46bd-9589-d14a00bb5850} as the default key.
+Key ring with default key {df4ff1d4-0252-46bd-9589-d14a00bb5850} was loaded during application startup.
+Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False
+Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False
+Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False
+Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False
+Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions
+Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False
+Compatibility switch AllowAreas in type RazorPagesOptions is using default value False
+Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False
+Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False
+Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+Failed to locate the development https certificate at '(null)'.
+Hosting started
+Loaded hosting startup assembly Feeder.API
+Loaded hosting startup assembly Microsoft.AspNetCore.Server.IISIntegration
+Connection id "0HLH02S4E5KK9" started.
+Connection id "0HLH02S4E5KKA" started.
+Request starting HTTP/1.1 GET http://localhost:44399/  
+Request starting HTTP/1.1 DEBUG http://localhost:63376/  0
+Wildcard detected, all requests with hosts will be allowed.
+Wildcard detected, all requests with hosts will be allowed.
+All hosts are allowed.
+All hosts are allowed.
+The request path / does not match a supported file type
+Connection id "0HLH02S4E5KK9" completed keep alive response.
+Request finished in 139.5979ms 200 
+Request did not match any routes.
+Connection id "0HLH02S4E5KKA" completed keep alive response.
+Request finished in 672.4581ms 404 
+Request starting HTTP/1.1 GET http://localhost:44399/api/source  
+All hosts are allowed.
+The request path /api/source does not match a supported file type
+Request successfully matched the route with name 'GetSources' and template 'api/Source'.
+Action 'Feeder.API.Controllers.SourceController.AddSource (Feeder.API)' with id '89289b25-dfe9-4477-9284-b7b515b1e0bc' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Route matched with {action = "GetSources", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.GetSources (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (157ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.GetSources (Feeder.API) - Validation state: Valid
+Compiling query model: 
+'from Source <generated>_0 in DbSet<Source>
+select [<generated>_0]'
+Optimized query model: 
+'from Source <generated>_0 in DbSet<Source>
+select [<generated>_0]'
+(QueryContext queryContext) => IEnumerable<Source> _InterceptExceptions(
+|__ source: IEnumerable<Source> _TrackEntities(
+|   |__ results: IEnumerable<Source> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT [s].[Id], [s].[CollectionId], [s].[Name], [s].[Url]
+|   |   |       FROM [Sources] AS [s], 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new Source()
+|   |           instance.<Id>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, Source.Id)
+|   |           instance.<CollectionId>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, Source.CollectionId)
+|   |           instance.<Name>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, Source.Name)
+|   |           instance.<Url>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, Source.Url)
+|   |           return instance
+|   |       }), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: Source }, 
+|   |__ entityAccessors: List<Func<Source, object>> 
+|       { 
+|           Func<Source, Source>, 
+|       }), 
+|__ contextType: Feeder.DAL.FeedContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CollectionId], [s].[Name], [s].[Url]
+FROM [Sources] AS [s]
+Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CollectionId], [s].[Name], [s].[Url]
+FROM [Sources] AS [s]
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Sources: 
+Executed action method Feeder.API.Controllers.SourceController.GetSources (Feeder.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 374.9736ms.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter
+No information found on request to perform content negotiation.
+Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+Attempting to select the first formatter in the output formatters list which can write the result.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Feeder.DAL.Models.Source, Feeder.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Executed action Feeder.API.Controllers.SourceController.GetSources (Feeder.API) in 2709.0859ms
+Connection id "0HLH02S4E5KK9" completed keep alive response.
+'FeedContext' disposed.
+Request finished in 2793.4048ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:44399/api/source?Name=The%20New%20York%20Times&Url=http://rss.nytimes.com/services/xml/rss/nyt/US.xml  0
+All hosts are allowed.
+POST requests are not supported
+Request successfully matched the route with name 'GetSources' and template 'api/Source'.
+Action 'Feeder.API.Controllers.SourceController.GetSources (Feeder.API)' with id '9d93f4c1-592b-4dd2-812c-32c7f3f52bbe' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Route matched with {action = "AddSource", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.AddSource (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Attempting to bind parameter 'Name' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Name' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Name'.
+Done attempting to bind parameter 'Name' of type 'System.String'.
+Attempting to bind parameter 'Url' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Url' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Url'.
+Done attempting to bind parameter 'Url' of type 'System.String'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.AddSource (Feeder.API) with arguments (The New York Times, http://rss.nytimes.com/services/xml/rss/nyt/US.xml) - Validation state: Valid
+Compiling query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+Optimized query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+(QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+|__ source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+|   |__ valueBuffers: IEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |           SELECT CASE
+|   |               WHEN EXISTS (
+|   |                   SELECT 1
+|   |                   FROM [Sources] AS [s]
+|   |                   WHERE [s].[Name] = @__Name_0)
+|   |               THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+|   |           END), 
+|   |__ throwOnNullResult: False)), 
+|__ contextType: Feeder.DAL.FeedContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Executed DbCommand (85ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' generated a temporary value for the 'Id' property of new 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'FeedContext' started tracking 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+SaveChanges starting for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Failed executing DbCommand (36ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+An exception occurred in the database while saving changes for context type 'Feeder.DAL.FeedContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Sources_Collections_CollectionId". The conflict occurred in database "feederdb", table "dbo.Collections", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Hosting starting
+User profile is available. Using 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-83b639e4-1733-4202-adb0-91e6f3317fa6.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-df4ff1d4-0252-46bd-9589-d14a00bb5850.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-f98209b9-f5a7-4f87-80d0-133b6d428d3b.xml'.
+Found key {83b639e4-1733-4202-adb0-91e6f3317fa6}.
+Found key {df4ff1d4-0252-46bd-9589-d14a00bb5850}.
+Found key {f98209b9-f5a7-4f87-80d0-133b6d428d3b}.
+Considering key {df4ff1d4-0252-46bd-9589-d14a00bb5850} with expiration date 2018-12-18 13:30:28Z as default key.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Decrypting secret element using Windows DPAPI.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+Using key {df4ff1d4-0252-46bd-9589-d14a00bb5850} as the default key.
+Key ring with default key {df4ff1d4-0252-46bd-9589-d14a00bb5850} was loaded during application startup.
+Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False
+Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False
+Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False
+Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False
+Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions
+Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False
+Compatibility switch AllowAreas in type RazorPagesOptions is using default value False
+Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False
+Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False
+Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+Failed to locate the development https certificate at '(null)'.
+Hosting started
+Loaded hosting startup assembly Feeder.API
+Loaded hosting startup assembly Microsoft.AspNetCore.Server.IISIntegration
+Connection id "0HLH02V6PPSUU" started.
+Connection id "0HLH02V6PPSUV" started.
+Request starting HTTP/1.1 GET http://localhost:44399/  
+Request starting HTTP/1.1 DEBUG http://localhost:63376/  0
+Wildcard detected, all requests with hosts will be allowed.
+Wildcard detected, all requests with hosts will be allowed.
+All hosts are allowed.
+All hosts are allowed.
+The request path / does not match a supported file type
+Connection id "0HLH02V6PPSUV" completed keep alive response.
+Request finished in 135.8381ms 200 
+Request did not match any routes.
+Connection id "0HLH02V6PPSUU" completed keep alive response.
+Request finished in 677.1977ms 404 
+Request starting HTTP/1.1 POST http://localhost:44399/api/source?Name=The%20New%20York%20Times&Url=http://rss.nytimes.com/services/xml/rss/nyt/US.xml  0
+All hosts are allowed.
+POST requests are not supported
+Request successfully matched the route with name 'GetSources' and template 'api/Source'.
+Action 'Feeder.API.Controllers.SourceController.GetSources (Feeder.API)' with id '45de4c4e-4507-4881-a1f5-91d3c69e6e22' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Route matched with {action = "AddSource", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.AddSource (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+An error occurred using the connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'master' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'master' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [feederdb];
+Executed DbCommand (263ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [feederdb];
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [feederdb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [feederdb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Closing connection to database 'master' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'master' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Sources] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Url] nvarchar(max) NULL,
+    [CollectionId] int NOT NULL,
+    CONSTRAINT [PK_Sources] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Sources] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Url] nvarchar(max) NULL,
+    [CollectionId] int NOT NULL,
+    CONSTRAINT [PK_Sources] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE CASCADE
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Feeds] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] int NOT NULL,
+    [Author] nvarchar(max) NULL,
+    [PublishDate] nvarchar(max) NULL,
+    [Content] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [SourceId] int NOT NULL,
+    CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Feeds] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] int NOT NULL,
+    [Author] nvarchar(max) NULL,
+    [PublishDate] nvarchar(max) NULL,
+    [Content] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [SourceId] int NOT NULL,
+    CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Committing transaction.
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Attempting to bind parameter 'Name' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Name' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Name'.
+Done attempting to bind parameter 'Name' of type 'System.String'.
+Attempting to bind parameter 'Url' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Url' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Url'.
+Done attempting to bind parameter 'Url' of type 'System.String'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.AddSource (Feeder.API) with arguments (The New York Times, http://rss.nytimes.com/services/xml/rss/nyt/US.xml) - Validation state: Valid
+Compiling query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+Optimized query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+(QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+|__ source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+|   |__ valueBuffers: IEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |           SELECT CASE
+|   |               WHEN EXISTS (
+|   |                   SELECT 1
+|   |                   FROM [Sources] AS [s]
+|   |                   WHERE [s].[Name] = @__Name_0)
+|   |               THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+|   |           END), 
+|   |__ throwOnNullResult: False)), 
+|__ contextType: Feeder.DAL.FeedContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Executed DbCommand (127ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' generated a temporary value for the 'Id' property of new 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'FeedContext' started tracking 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+SaveChanges starting for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Failed executing DbCommand (29ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+An exception occurred in the database while saving changes for context type 'Feeder.DAL.FeedContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Sources_Collections_CollectionId". The conflict occurred in database "feederdb", table "dbo.Collections", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Hosting starting
+User profile is available. Using 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-83b639e4-1733-4202-adb0-91e6f3317fa6.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-df4ff1d4-0252-46bd-9589-d14a00bb5850.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-f98209b9-f5a7-4f87-80d0-133b6d428d3b.xml'.
+Found key {83b639e4-1733-4202-adb0-91e6f3317fa6}.
+Found key {df4ff1d4-0252-46bd-9589-d14a00bb5850}.
+Found key {f98209b9-f5a7-4f87-80d0-133b6d428d3b}.
+Considering key {df4ff1d4-0252-46bd-9589-d14a00bb5850} with expiration date 2018-12-18 13:30:28Z as default key.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Decrypting secret element using Windows DPAPI.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+Using key {df4ff1d4-0252-46bd-9589-d14a00bb5850} as the default key.
+Key ring with default key {df4ff1d4-0252-46bd-9589-d14a00bb5850} was loaded during application startup.
+Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False
+Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False
+Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False
+Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False
+Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions
+Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False
+Compatibility switch AllowAreas in type RazorPagesOptions is using default value False
+Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False
+Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False
+Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+Failed to locate the development https certificate at '(null)'.
+Hosting started
+Loaded hosting startup assembly Feeder.API
+Loaded hosting startup assembly Microsoft.AspNetCore.Server.IISIntegration
+Connection id "0HLH0D7GJ2C0E" started.
+Connection id "0HLH0D7GJ2C0F" started.
+Request starting HTTP/1.1 GET http://localhost:44399/  
+Request starting HTTP/1.1 GET http://localhost:44399/  
+Wildcard detected, all requests with hosts will be allowed.
+Wildcard detected, all requests with hosts will be allowed.
+All hosts are allowed.
+All hosts are allowed.
+The request path / does not match a supported file type
+The request path / does not match a supported file type
+Request did not match any routes.
+Request did not match any routes.
+Connection id "0HLH0D7GJ2C0E" completed keep alive response.
+Connection id "0HLH0D7GJ2C0F" completed keep alive response.
+Request finished in 829.1411ms 404 
+Request finished in 830.0512ms 404 
+Request starting HTTP/1.1 POST http://localhost:44399/api/source?Name=The%20New%20York%20Times&Url=http://rss.nytimes.com/services/xml/rss/nyt/US.xml  0
+All hosts are allowed.
+POST requests are not supported
+Request successfully matched the route with name 'GetSources' and template 'api/Source'.
+Action 'Feeder.API.Controllers.SourceController.GetSources (Feeder.API)' with id 'bfee472c-1039-4017-a7ce-8c03ed951a54' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Route matched with {action = "AddSource", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.AddSource (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (163ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Attempting to bind parameter 'Name' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Name' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Name'.
+Done attempting to bind parameter 'Name' of type 'System.String'.
+Attempting to bind parameter 'Url' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Url' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Url'.
+Done attempting to bind parameter 'Url' of type 'System.String'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.AddSource (Feeder.API) with arguments (The New York Times, http://rss.nytimes.com/services/xml/rss/nyt/US.xml) - Validation state: Valid
+Compiling query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+Optimized query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+(QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+|__ source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+|   |__ valueBuffers: IEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |           SELECT CASE
+|   |               WHEN EXISTS (
+|   |                   SELECT 1
+|   |                   FROM [Sources] AS [s]
+|   |                   WHERE [s].[Name] = @__Name_0)
+|   |               THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+|   |           END), 
+|   |__ throwOnNullResult: False)), 
+|__ contextType: Feeder.DAL.FeedContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Executed DbCommand (69ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' generated a temporary value for the 'Id' property of new 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'FeedContext' started tracking 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Connection id "0HLH0D7GJ2C0E" received FIN.
+SaveChanges starting for 'FeedContext'.
+Connection id "0HLH0D7GJ2C0E" disconnecting.
+DetectChanges starting for 'FeedContext'.
+Connection id "0HLH0D7GJ2C0E" sending FIN.
+Connection id "0HLH0D7GJ2C0E" stopped.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Failed executing DbCommand (29ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+An exception occurred in the database while saving changes for context type 'Feeder.DAL.FeedContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Sources_Collections_CollectionId". The conflict occurred in database "feederdb", table "dbo.Collections", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Migrating using database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Applying migration '20180921225436_FixFeedEntity'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Failed executing DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (59ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' disposed.
+Hosting starting
+User profile is available. Using 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-83b639e4-1733-4202-adb0-91e6f3317fa6.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-df4ff1d4-0252-46bd-9589-d14a00bb5850.xml'.
+Reading data from file 'C:\Users\DrVoo\AppData\Local\ASP.NET\DataProtection-Keys\key-f98209b9-f5a7-4f87-80d0-133b6d428d3b.xml'.
+Found key {83b639e4-1733-4202-adb0-91e6f3317fa6}.
+Found key {df4ff1d4-0252-46bd-9589-d14a00bb5850}.
+Found key {f98209b9-f5a7-4f87-80d0-133b6d428d3b}.
+Considering key {df4ff1d4-0252-46bd-9589-d14a00bb5850} with expiration date 2018-12-18 13:30:28Z as default key.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Decrypting secret element using Windows DPAPI.
+Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+Using key {df4ff1d4-0252-46bd-9589-d14a00bb5850} as the default key.
+Key ring with default key {df4ff1d4-0252-46bd-9589-d14a00bb5850} was loaded during application startup.
+Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False
+Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False
+Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False
+Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False
+Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions
+Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False
+Compatibility switch AllowAreas in type RazorPagesOptions is using default value False
+Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False
+Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False
+Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+Failed to locate the development https certificate at '(null)'.
+Hosting started
+Loaded hosting startup assembly Feeder.API
+Loaded hosting startup assembly Microsoft.AspNetCore.Server.IISIntegration
+Connection id "0HLH0DGGFP6KU" started.
+Connection id "0HLH0DGGFP6KV" started.
+Request starting HTTP/1.1 GET http://localhost:44399/  
+Request starting HTTP/1.1 DEBUG http://localhost:63376/  0
+Wildcard detected, all requests with hosts will be allowed.
+Wildcard detected, all requests with hosts will be allowed.
+All hosts are allowed.
+All hosts are allowed.
+Connection id "0HLH0DGGFP6KU" completed keep alive response.
+Request finished in 51.0213ms 200 
+The request path / does not match a supported file type
+Request did not match any routes.
+Connection id "0HLH0DGGFP6KV" completed keep alive response.
+Request finished in 219.5754ms 404 
+Request starting HTTP/1.1 POST http://localhost:44399/api/source?Name=The%20New%20York%20Times&Url=http://rss.nytimes.com/services/xml/rss/nyt/US.xml  0
+All hosts are allowed.
+POST requests are not supported
+Request successfully matched the route with name 'GetSources' and template 'api/Source'.
+Action 'Feeder.API.Controllers.SourceController.GetSources (Feeder.API)' with id '0e077907-cc75-487f-8b97-8821ef2fbb30' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Route matched with {action = "AddSource", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.AddSource (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+An 'IServiceProvider' was created for internal use by Entity Framework.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+An error occurred using the connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'master' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'master' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [feederdb];
+Executed DbCommand (255ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [feederdb];
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [feederdb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (57ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [feederdb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Closing connection to database 'master' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'master' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Collections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    CONSTRAINT [PK_Collections] PRIMARY KEY ([Id])
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Sources] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Url] nvarchar(max) NULL,
+    [CollectionId] int NULL,
+    CONSTRAINT [PK_Sources] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE NO ACTION
+);
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Sources] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Url] nvarchar(max) NULL,
+    [CollectionId] int NULL,
+    CONSTRAINT [PK_Sources] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sources_Collections_CollectionId] FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id]) ON DELETE NO ACTION
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Feeds] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] int NOT NULL,
+    [Author] nvarchar(max) NULL,
+    [PublishDate] nvarchar(max) NULL,
+    [Content] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [SourceId] int NOT NULL,
+    CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE
+);
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Feeds] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] int NOT NULL,
+    [Author] nvarchar(max) NULL,
+    [PublishDate] nvarchar(max) NULL,
+    [Content] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [SourceId] int NOT NULL,
+    CONSTRAINT [PK_Feeds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Feeds_Sources_SourceId] FOREIGN KEY ([SourceId]) REFERENCES [Sources] ([Id]) ON DELETE CASCADE
+);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Feeds_SourceId] ON [Feeds] ([SourceId]);
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Sources_CollectionId] ON [Sources] ([CollectionId]);
+Committing transaction.
+Disposing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Attempting to bind parameter 'Name' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Name' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Name'.
+Done attempting to bind parameter 'Name' of type 'System.String'.
+Attempting to bind parameter 'Url' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Url' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Url'.
+Done attempting to bind parameter 'Url' of type 'System.String'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.AddSource (Feeder.API) with arguments (The New York Times, http://rss.nytimes.com/services/xml/rss/nyt/US.xml) - Validation state: Valid
+Compiling query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+Optimized query model: 
+'(from Source s in DbSet<Source>
+where [s].Name == __Name_0
+select [s]).Any()'
+(QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+|__ source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+|   |__ valueBuffers: IEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |           SELECT CASE
+|   |               WHEN EXISTS (
+|   |                   SELECT 1
+|   |                   FROM [Sources] AS [s]
+|   |                   WHERE [s].[Name] = @__Name_0)
+|   |               THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+|   |           END), 
+|   |__ throwOnNullResult: False)), 
+|__ contextType: Feeder.DAL.FeedContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Executed DbCommand (90ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' generated a temporary value for the 'Id' property of new 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'FeedContext' started tracking 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+SaveChanges starting for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Foreign key property 'Source.Id' detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+A data reader was disposed.
+Committing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Disposing transaction.
+An 'Source' entity tracked by 'FeedContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+SaveChanges completed for 'FeedContext' with 1 entities written to the database.
+Source The New York Times has been added
+Executed action method Feeder.API.Controllers.SourceController.AddSource (Feeder.API), returned result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult in 4702.0455ms.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Before executing action result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult.
+List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter
+No information found on request to perform content negotiation.
+Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+Attempting to select the first formatter in the output formatters list which can write the result.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value of type 'Feeder.DAL.Models.Source'.
+After executing action result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult.
+Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Executed action Feeder.API.Controllers.SourceController.AddSource (Feeder.API) in 16711.656ms
+Connection id "0HLH0DGGFP6KU" completed keep alive response.
+'FeedContext' disposed.
+Request finished in 16786.1179ms 201 application/json; charset=utf-8
+Connection id "0HLH0DGGFP6KV" received FIN.
+Connection id "0HLH0DGGFP6KV" disconnecting.
+Connection id "0HLH0DGGFP6KV" sending FIN.
+Connection processing ended abnormally.
+Connection id "0HLH0DGGFP6KU" disconnecting.
+Connection id "0HLH0DGGFP6KU" sending FIN.
+Connection id "0HLH0DGGFP6KU" received FIN.
+Connection id "0HLH0DGGFP6KU" stopped.
+Connection id "0HLH0DGGFP6KV" stopped.
+Connection id "0HLH0DGGFP6L0" started.
+Request starting HTTP/1.1 POST http://localhost:44399/api/source?Name=Wall%20Street%20Journal&Url=http://www.wsj.com/xml/rss/3_7014.xml  0
+All hosts are allowed.
+POST requests are not supported
+Request successfully matched the route with name 'GetSources' and template 'api/Source'.
+Action 'Feeder.API.Controllers.SourceController.GetSources (Feeder.API)' with id '0e077907-cc75-487f-8b97-8821ef2fbb30' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Route matched with {action = "AddSource", controller = "Source"}. Executing action Feeder.API.Controllers.SourceController.AddSource (Feeder.API)
+Execution plan of authorization filters (in the following order): None
+Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter
+Execution plan of exception filters (in the following order): None
+Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Entity Framework Core 2.2.0-preview2-35157 initialized 'FeedContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Attempting to bind parameter 'Name' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Name' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Name'.
+Done attempting to bind parameter 'Name' of type 'System.String'.
+Attempting to bind parameter 'Url' of type 'System.String' ...
+Attempting to bind model of type 'System.String' using the name 'Url' in request data ...
+Done attempting to bind model of type 'System.String' using the name 'Url'.
+Done attempting to bind parameter 'Url' of type 'System.String'.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Executing action method Feeder.API.Controllers.SourceController.AddSource (Feeder.API) with arguments (Wall Street Journal, http://www.wsj.com/xml/rss/3_7014.xml) - Validation state: Valid
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Executing DbCommand [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Executed DbCommand (25ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sources] AS [s]
+        WHERE [s].[Name] = @__Name_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+A data reader was disposed.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+'FeedContext' generated a temporary value for the 'Id' property of new 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'FeedContext' started tracking 'Source' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+SaveChanges starting for 'FeedContext'.
+DetectChanges starting for 'FeedContext'.
+DetectChanges completed for 'FeedContext'.
+Opening connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Opened connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Beginning transaction with isolation level 'ReadCommitted'.
+Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sources] ([CollectionId], [Name], [Url])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Sources]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Foreign key property 'Source.Id' detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+A data reader was disposed.
+Committing transaction.
+Closing connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Closed connection to database 'feederdb' on server '(localdb)\mssqllocaldb'.
+Disposing transaction.
+An 'Source' entity tracked by 'FeedContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+SaveChanges completed for 'FeedContext' with 1 entities written to the database.
+Source Wall Street Journal has been added
+Executed action method Feeder.API.Controllers.SourceController.AddSource (Feeder.API), returned result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult in 70.5034ms.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Before executing action result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult.
+List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter
+No information found on request to perform content negotiation.
+Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+Attempting to select the first formatter in the output formatters list which can write the result.
+Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Executing ObjectResult, writing value of type 'Feeder.DAL.Models.Source'.
+After executing action result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult.
+Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Executed action Feeder.API.Controllers.SourceController.AddSource (Feeder.API) in 186.3635ms
+Connection id "0HLH0DGGFP6L0" completed keep alive response.
+'FeedContext' disposed.
+Request finished in 195.9255ms 201 application/json; charset=utf-8

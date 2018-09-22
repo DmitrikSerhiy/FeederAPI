@@ -8,5 +8,6 @@ namespace Feeder.DAL.Interfaces
     {
         IEnumerable<T> GetFeeds();
         T GetFeed(int Id);
+        void Save();
     }
 }

@@ -12,7 +12,7 @@ namespace Freeder.BLL
         {
             Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<RssDTO, Rss>().ReverseMap();
+                //cfg.CreateMap<RssDTO, Rss>().ReverseMap();
             });
         }
     }

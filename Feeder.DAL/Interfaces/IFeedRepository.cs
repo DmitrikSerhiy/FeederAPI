@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Feeder.DAL.Interfaces
 {
-    public interface IAtomRepositoty : IRepository<Atom>
+    public interface IFeedRepository : IRepository<Feed>
     {
-
+        
     }
 }

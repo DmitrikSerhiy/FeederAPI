@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Feeder.DAL.Models
+namespace Feeder.DAL
 {
-    public class Atom
+    public enum FeedType : int
     {
-        public int Id { get; set; }
+        RSS = 1,
+        Atom
     }
 }
