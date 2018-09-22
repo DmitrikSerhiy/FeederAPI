@@ -6,8 +6,9 @@ namespace Feeder.DAL.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        IEnumerable<T> GetFeeds();
-        T GetFeed(int Id);
+        IEnumerable<T> Get();
+        T Get(string Name);
+        T Add();
         void Save();
     }
 }

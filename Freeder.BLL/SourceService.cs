@@ -1,4 +1,5 @@
 ﻿using Feeder.DAL;
+using Feeder.DAL.Interfaces;
 using Feeder.DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -9,32 +10,27 @@ namespace Freeder.BLL
 {
     public class SourceService
     {
-        private FeedContext feedContext;
-        public SourceService(FeedContext FeedContext)
+        private ISourceRepository sourceRepository;
+        public SourceService(ISourceRepository SourceRepository)
         {
-            feedContext = FeedContext;
+            sourceRepository = SourceRepository;
         }
 
         public Source AddSource(string Name, string Url)
         {
-            if (!feedContext.Sources.Any(s => s.Name == Name))
-            {
-                var source = new Source { Name = Name, Url = Url };
-                feedContext.Sources.Add(source);
-                feedContext.SaveChanges();
-                return source;
-            }
-            return null;
+            var source = sourceRepository.AddSource(Name, Url);
+            sourceRepository.Save();
+            return source;
         }
 
         public Source GetSource(string Name)
         {
-            return feedContext.Sources.FirstOrDefault(s => s.Name == Name);
+            return sourceRepository.GetSource(Name);
         }
 
         public List<Source> GetSources()
         {
-            return feedContext.Sources.ToList();
+            return sourceRepository.GetSources(); ;
         }
     }
 }

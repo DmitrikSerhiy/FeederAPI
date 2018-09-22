@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Feeder.DAL.Migrations
 {
-    public partial class FixFeedEntity : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,7 +28,7 @@ namespace Feeder.DAL.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Url = table.Column<string>(nullable: true),
-                    CollectionId = table.Column<int>(nullable: false)
+                    CollectionId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -38,7 +38,7 @@ namespace Feeder.DAL.Migrations
                         column: x => x.CollectionId,
                         principalTable: "Collections",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -47,11 +47,12 @@ namespace Feeder.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Link = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(nullable: true),
                     Type = table.Column<int>(nullable: false),
                     Author = table.Column<string>(nullable: true),
                     PublishDate = table.Column<string>(nullable: true),
                     Content = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
                     SourceId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

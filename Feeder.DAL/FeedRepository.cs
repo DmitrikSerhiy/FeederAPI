@@ -1,5 +1,6 @@
 ﻿using Feeder.DAL.Interfaces;
 using Feeder.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +16,34 @@ namespace Feeder.DAL
             feedContext = FeedContext;
         }
 
-        public void AddRssToDb(Feed feed)
+        public void AddFeed(Feed feed)
         {
-          //  feedContext.Rsses.Add(rss);
+            feedContext.Feeds.Add(feed);
         }
 
-        public Feed GetFeed(int Id)
+        public Source GetFeeds(string sourceName)
         {
-            return null;// feedContext.Rsses.FirstOrDefault(rss => rss.Id == Id);
+            return feedContext.Sources
+                .Include(s => s.Feeds)
+                .FirstOrDefault(s => s.Name == sourceName);
         }
 
-        public IEnumerable<Feed> GetFeeds()
+        public Feed GetFeed(string title, string publishDate)
         {
-            return null;//feedContext.Rsses.ToList();
+            return feedContext.Feeds.FirstOrDefault(f => f.Title == title && f.PublishDate == publishDate);
+        }
+
+        public bool IsFeedInSource(Feed feed, Source source)
+        {
+            return feedContext.Sources
+                .Include(s => s.Feeds)
+                .First(s => s.Id == source.Id)
+                    .Feeds.Any(f => f.PublishDate == feed.PublishDate && f.Title == feed.Title);
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            feedContext.SaveChanges();
         }
     }
 }
