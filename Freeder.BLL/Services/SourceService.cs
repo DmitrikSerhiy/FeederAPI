@@ -1,6 +1,8 @@
-﻿using Feeder.DAL;
+﻿using AutoMapper;
+using Feeder.DAL;
 using Feeder.DAL.Interfaces;
 using Feeder.DAL.Models;
+using Freeder.BLL.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,17 +27,17 @@ namespace Freeder.BLL.Services
 
         public bool IsSourceNameValid(string sourceName)
         {
-            return sourceRepository.IsExist(sourceName);
+            return sourceRepository.IsExist(sourceName); 
         }
 
-        public Source GetSource(string Name)
+        public SourceDTO GetSource(string Name)
         {
-            return sourceRepository.GetSource(Name);
+            return Mapper.Map<SourceDTO>(sourceRepository.GetSource(Name));
         }
 
-        public List<Source> GetSources()
+        public List<SourceDTO> GetSources()
         {
-            return sourceRepository.GetSources();
+            return Mapper.Map<List<Source>, List<SourceDTO>>(sourceRepository.GetSources());
         }
     }
 }

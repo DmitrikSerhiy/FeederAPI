@@ -31,48 +31,33 @@ namespace Freeder.BLL.Services
 
         public CollectionDTO AddCollection(string Name)
         {
-            if (!collectionRepository.IsExist(Name))
-            {
-                var col = collectionRepository.AddCollection(Name);
-                collectionRepository.Save();
-                return Mapper.Map<CollectionDTO>(col);
-            }
-            return null;
+
+            var col = collectionRepository.AddCollection(Name);
+            collectionRepository.Save();
+            return Mapper.Map<CollectionDTO>(col);
         }
 
         public CollectionDTO EditCollectionName(string collectionName, string newName)
         {
-            if (collectionRepository.IsExist(collectionName))
-            {
-                collectionRepository.EditCollectionName(collectionName, newName);
-                collectionRepository.Save();
-                return Mapper.Map<CollectionDTO>(collectionRepository.GetCollection(newName));
-            }
-            return null;
+            collectionRepository.EditCollectionName(collectionName, newName);
+            collectionRepository.Save();
+            return Mapper.Map<CollectionDTO>(collectionRepository.GetCollection(newName));
         }
 
         public CollectionDTO AddSourceToCollection(string sourceName, string collectionName)
         {
-            if(sourceRepository.IsExist(sourceName) && collectionRepository.IsExist(collectionName))
-            {
-                var source = sourceRepository.GetSource(sourceName);
-                var collection = collectionRepository.GetCollection(collectionName);
-                collectionRepository.AddSourceToCollection(source, collection);
-                collectionRepository.Save();
-                return Mapper.Map<CollectionDTO>(collectionRepository.GetCollection(collectionName));
-            }
-            return null;
+            var source = sourceRepository.GetSource(sourceName);
+            var collection = collectionRepository.GetCollection(collectionName);
+            collectionRepository.AddSourceToCollection(source, collection);
+            collectionRepository.Save();
+            return Mapper.Map<CollectionDTO>(collectionRepository.GetCollection(collectionName));
         }
 
         public bool DeleteCollection(string Name)
         {
-            if (collectionRepository.IsExist(Name))
-            {
-                collectionRepository.DeleteCollection(Name);
-                collectionRepository.Save();
-                return true;
-            }
-            return false;
+            collectionRepository.DeleteCollection(Name);
+            collectionRepository.Save();
+            return true;
         }
 
         public bool IsCollectionNameValid(string collectionName)

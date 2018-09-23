@@ -27,12 +27,12 @@ namespace Feeder.Controllers
         {
             var feed = feedService.GetFeed(title, publishDate);
 
-            if (feed != null)
+            if (feed != null) 
             {
                 logger.LogInformation($"Feed: {feed.Title}");
                 return Ok(feed);
             }
-                return NotFound();
+            return NotFound($"There is no feed with title: {title}");
         }
 
         [HttpGet("{source}", Name = "GetFeeds")]

@@ -25,11 +25,13 @@ namespace Feeder.API.Controllers
         [HttpGet("{Name}", Name = "GetSource")]
         public ActionResult GetSource(string Name)
         {
-            var source = sourceService.GetSource(Name);
+            var source = sourceService.GetSource(Name); 
 
-            logger.LogInformation($"Source: {source?.Name}");
-
-            if (source != null) return Ok(source);
+            if (source != null)
+            {
+                logger.LogInformation($"Source: {source?.Name}");
+                return Ok(source);
+            }
             return NotFound();
         }
 
@@ -38,24 +40,27 @@ namespace Feeder.API.Controllers
         {
             var sources = sourceService.GetSources();
 
-            logger.LogInformation($"Sources: {string.Join(", ", sources.Select(s => s.Name))}");
-
-            if (sources != null) return Ok(sources);
+            if (sources != null)
+            {
+                logger.LogInformation($"Sources: {string.Join(", ", sources.Select(s => s.Name))}");
+                return Ok(sources);
+            }
             return NotFound();
         }
 
         [HttpPost(Name = "AddSource")]
         public ActionResult AddSource(string Name, string Url)
         {
+            if (sourceService.IsSourceNameValid(Name)) return Conflict($"Source {Name} is already created");
+
             var newSource = sourceService.AddSource(Name, Url);
 
-            if (newSource == null)
+            if (newSource != null)
             {
-                logger.LogInformation($"Source {newSource?.Name} is already in db");
-                return Conflict("Already in db");
+                logger.LogInformation($"Source {newSource?.Name} has been added");
+                return CreatedAtRoute("GetSources", new { Name }, newSource);
             }
-            logger.LogInformation($"Source {newSource?.Name} has been added");
-            return CreatedAtRoute("GetSources", new { Name }, newSource);
+            return BadRequest();
         }
     }
 }

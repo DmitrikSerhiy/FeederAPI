@@ -56,6 +56,7 @@ namespace Feeder.API.Controllers
         [HttpPost("{CollectionName}", Name = "AddCollection")]
         public ActionResult AddCollection(string CollectionName)
         {
+            if (collectionService.IsCollectionNameValid(CollectionName)) return Conflict($"{CollectionName} is already created");
             var collection = collectionService.AddCollection(CollectionName);
 
             if (collection != null)
