@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Freeder.BLL
+namespace Freeder.BLL.Services
 {
     public class SourceService
     {
@@ -23,6 +23,11 @@ namespace Freeder.BLL
             return source;
         }
 
+        public bool IsSourceNameValid(string sourceName)
+        {
+            return sourceRepository.IsExist(sourceName);
+        }
+
         public Source GetSource(string Name)
         {
             return sourceRepository.GetSource(Name);
@@ -30,7 +35,7 @@ namespace Freeder.BLL
 
         public List<Source> GetSources()
         {
-            return sourceRepository.GetSources(); ;
+            return sourceRepository.GetSources();
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Feeder.DAL.Models;
-using Freeder.BLL;
+using Freeder.BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace Freeder.BLL
+namespace Freeder.BLL.Services
 {
     public class FeedService
     {
@@ -16,8 +16,8 @@ namespace Freeder.BLL
         private ISourceRepository sourceRepository;
         public FeedService(IUnitOfWork UnitOfWork)
         {
-            feedRepository = UnitOfWork.feedRepository;
-            sourceRepository = UnitOfWork.sourceRepository;
+            feedRepository = UnitOfWork.FeedRepository;
+            sourceRepository = UnitOfWork.SourceRepository;
         }
 
         public SourceDTO AddFeeds(string sourceName, string Type)

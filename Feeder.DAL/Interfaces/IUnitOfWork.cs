@@ -6,7 +6,8 @@ namespace Feeder.DAL.Interfaces
 {
     public interface IUnitOfWork
     {
-        IFeedRepository feedRepository { get; }
-        ISourceRepository sourceRepository { get; }
+        IFeedRepository FeedRepository { get; }
+        ISourceRepository SourceRepository { get; }
+        ICollectionRepository CollectionRepository { get; }
     }
 }

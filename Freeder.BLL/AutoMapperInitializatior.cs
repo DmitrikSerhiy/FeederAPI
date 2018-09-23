@@ -20,6 +20,8 @@ namespace Freeder.BLL
 
                 cfg.CreateMap<Source, SourceDTO>().ReverseMap();
                 // .ForMember(dto => dto.Feeds, source => source.MapFrom(s => s.Feeds))
+
+                cfg.CreateMap<Collection, CollectionDTO>().ReverseMap();
             });
         }
     }

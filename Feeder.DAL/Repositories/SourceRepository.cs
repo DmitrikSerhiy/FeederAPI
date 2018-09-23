@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Feeder.DAL
+namespace Feeder.DAL.Repositories
 {
     public class SourceRepository : ISourceRepository
     {
@@ -36,6 +36,11 @@ namespace Feeder.DAL
         public List<Source> GetSources()
         {
             return feedContext.Sources.ToList();
+        }
+
+        public bool IsExist(string sourceName)
+        {
+            return feedContext.Sources.Any(s => s.Name == sourceName);
         }
 
         public void Save()

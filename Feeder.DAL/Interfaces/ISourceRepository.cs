@@ -10,6 +10,7 @@ namespace Feeder.DAL.Interfaces
         Source GetSource(string Name);
         Source AddSource(string Name, string Url);
         List<Source> GetSources();
+        bool IsExist(string sourceName);
         void Save();
     }
 }

@@ -7,18 +7,22 @@ namespace Feeder.DAL
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly IFeedRepository FeedRepository;
-        private readonly ISourceRepository SourceRepository;
+        private readonly IFeedRepository feedRepository;
+        private readonly ISourceRepository sourceRepository;
+        private readonly ICollectionRepository collectionRepository;
 
-        public UnitOfWork(IFeedRepository feedRepository, ISourceRepository sourceRepository)
+        public UnitOfWork(IFeedRepository FeedRepository, ISourceRepository SourceRepository, ICollectionRepository CollectionRepository)
         {
-            FeedRepository = feedRepository;
-            SourceRepository = sourceRepository;
+            feedRepository = FeedRepository;
+            sourceRepository = SourceRepository;
+            collectionRepository = CollectionRepository;
         }
 
-        public IFeedRepository feedRepository => FeedRepository;
+        public IFeedRepository FeedRepository => feedRepository;
 
-        public ISourceRepository sourceRepository => SourceRepository;
+        public ISourceRepository SourceRepository => sourceRepository;
+
+        public ICollectionRepository CollectionRepository => collectionRepository;
 
     }
 }
