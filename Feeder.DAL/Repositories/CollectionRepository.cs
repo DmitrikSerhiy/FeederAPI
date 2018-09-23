@@ -65,6 +65,11 @@ namespace Feeder.DAL.Repositories
 
         }
 
+        public Collection ViewCollection(string collectionName)
+        {
+            return context.Collections.Include(c => c.Sources).ThenInclude(s => s.Feeds).FirstOrDefault(s => s.Name == collectionName);
+        }
+
         public void Save()
         {
             context.SaveChanges();

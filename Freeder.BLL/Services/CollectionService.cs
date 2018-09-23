@@ -61,6 +61,11 @@ namespace Freeder.BLL.Services
             return collectionRepository.IsCollectionContainSource(collection, source);
         }
 
+        public CollectionDTO ViewCollection(string collectionName)
+        {
+            return Mapper.Map<CollectionDTO>(collectionRepository.ViewCollection(collectionName));
+        }
+
         public bool DeleteSourceFromCollection(string collectionName, string sourceName)
         {
             collectionRepository.DeleteSourceFromCollection(collectionName, sourceName);

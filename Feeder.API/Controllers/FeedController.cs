@@ -21,6 +21,12 @@ namespace Feeder.Controllers
 
         }
 
+        /// <summary>
+        ///     Get specific feed by name and publish date
+        /// </summary>
+        /// <param name="feedTitle"></param>
+        /// <param name="feedPublishDate"></param>
+        /// <returns></returns>
         [HttpGet("{feedTitle}/{feedPublishDate}", Name = "GetFeed")]
         public ActionResult GetFeed(string feedTitle, string feedPublishDate)
         {
@@ -34,6 +40,11 @@ namespace Feeder.Controllers
             return NotFound($"There is no feed with title: {feedTitle}");
         }
 
+        /// <summary>
+        ///     Get all feeds for specific source
+        /// </summary>
+        /// <param name="sourceName"></param>
+        /// <returns></returns>
         [HttpGet("{sourceName}", Name = "GetFeeds")]
         public ActionResult GetFeeds(string sourceName)
         {
@@ -49,6 +60,12 @@ namespace Feeder.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        ///     Fill specific source with feeds
+        /// </summary>
+        /// <param name="sourceName"></param>
+        /// <param name="type">RSS or Atom</param>
+        /// <returns></returns>
         [HttpPost(Name = "AddFeeds")]
         public ActionResult AddFeeds(string sourceName, string type)
         {

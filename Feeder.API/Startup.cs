@@ -50,6 +50,12 @@ namespace Feeder
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc();
+            services.AddSwaggerGen(sg =>
+            {
+                sg.SwaggerDoc("v3", new Swashbuckle.AspNetCore.Swagger.Info { Title = "Feeder API" });
+                string xmlPath = System.AppDomain.CurrentDomain.BaseDirectory + @"Feeder.API.xml";
+                sg.IncludeXmlComments(xmlPath);
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -58,6 +64,8 @@ namespace Feeder
             app.UseStaticFiles();
 
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(sui => sui.SwaggerEndpoint("/swagger/v3/swagger.json", "Feeder API"));
         }
     }
 }

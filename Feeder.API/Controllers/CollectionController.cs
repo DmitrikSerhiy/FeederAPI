@@ -23,6 +23,11 @@ namespace Feeder.API.Controllers
             logger = LoggerFactory.CreateLogger<CollectionController>();
         }
 
+        /// <summary>
+        ///     Get specific collection
+        /// </summary>
+        /// <param name="collectionName"></param>
+        /// <returns></returns>
         [HttpGet("{collectionName}", Name = "GetCollection")]
         public ActionResult GetCollection(string collectionName)
         {
@@ -37,6 +42,10 @@ namespace Feeder.API.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        ///     Get all collections without sources
+        /// </summary>
+        /// <returns></returns>
         [HttpGet(Name = "GetCollections")]
         public ActionResult GetCollections()
         {
@@ -50,6 +59,31 @@ namespace Feeder.API.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        ///     Get specific collecton with included sources and feeds
+        /// </summary>
+        /// <param name="collectionName"></param>
+        /// <returns></returns>
+        [HttpGet("view/{collectionName}", Name ="ViewCollection")]
+        public ActionResult ViewCollection(string collectionName)
+        {
+            if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName} collection");
+
+            var collection = collectionService.ViewCollection(collectionName);
+
+            if(collection != null)
+            {
+                logger.LogInformation($"Collection {collectionName} with sources: {string.Join(", ", collection.Sources.Select(s => s.Name))}");
+                return Ok(collection);
+            }
+            return BadRequest();
+        }
+
+        /// <summary>
+        ///     Add new collection
+        /// </summary>
+        /// <param name="collectionName"></param>
+        /// <returns></returns>
         [HttpPost(Name = "AddCollection")]
         public ActionResult AddCollection(string collectionName)
         {
@@ -64,6 +98,12 @@ namespace Feeder.API.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        ///     Add existed source to the specific collection
+        /// </summary>
+        /// <param name="collectionName"></param>
+        /// <param name="sourceName"></param>
+        /// <returns></returns>
         [HttpPut("{collectionName}/{sourceName}", Name = "AddSourceToCollection")]
         public ActionResult AddSourceToCollection(string collectionName, string sourceName)
         {
@@ -80,7 +120,12 @@ namespace Feeder.API.Controllers
             return BadRequest();
         }
 
-
+        /// <summary>
+        ///     Delete source from collection
+        /// </summary>
+        /// <param name="collectionName"></param>
+        /// <param name="sourceName"></param>
+        /// <returns></returns>
         [HttpDelete(Name = "DeleteSourceFromCollection")]
         public ActionResult DeleteSourceFromCollection(string collectionName, string sourceName)
         {
@@ -98,7 +143,12 @@ namespace Feeder.API.Controllers
 
         }
 
-
+        /// <summary>
+        ///     Update collection name
+        /// </summary>
+        /// <param name="collectionName"></param>
+        /// <param name="newName"></param>
+        /// <returns></returns>
         [HttpPut(Name = "UpdateCollectionName")]
         public ActionResult UpdateCollectionName(string collectionName, string newName)
         {
@@ -116,6 +166,11 @@ namespace Feeder.API.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        ///     Delete specific collection
+        /// </summary>
+        /// <param name="collectionName"></param>
+        /// <returns></returns>
         [HttpDelete("{collectionName}", Name="DeleteCollection")]
         public ActionResult DeleteCollection(string collectionName)
         {

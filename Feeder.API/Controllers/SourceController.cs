@@ -22,6 +22,12 @@ namespace Feeder.API.Controllers
             logger = LoggerFactory.CreateLogger<SourceController>();
         }
 
+
+        /// <summary>
+        ///     Get specific source without feeds
+        /// </summary>
+        /// <param name="sourceName"></param>
+        /// <returns></returns>
         [HttpGet("{sourceName}", Name = "GetSource")]
         public ActionResult GetSource(string sourceName)
         {
@@ -35,6 +41,10 @@ namespace Feeder.API.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        ///     Get all sources without feeds
+        /// </summary>
+        /// <returns></returns>
         [HttpGet(Name = "GetSources")]
         public ActionResult GetSources()
         {
@@ -48,6 +58,12 @@ namespace Feeder.API.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        ///     Add new source
+        /// </summary>
+        /// <param name="sourceName">Name of the real site</param>
+        /// <param name="url">Link to the real site</param>
+        /// <returns></returns>
         [HttpPost(Name = "AddSource")]
         public ActionResult AddSource(string sourceName, string url)
         {

@@ -15,6 +15,7 @@ namespace Feeder.DAL.Interfaces
         void AddSourceToCollection(Source source, Collection collection);
         bool IsCollectionContainSource(Collection collection, Source source);
         void DeleteSourceFromCollection(string collectionName, string sourceName);
+        Collection ViewCollection(string collectionName);
         bool IsExist(string Name);
         void Save();
     }
