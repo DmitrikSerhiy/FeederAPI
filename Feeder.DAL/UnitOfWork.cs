@@ -23,6 +23,5 @@ namespace Feeder.DAL
         public ISourceRepository SourceRepository => sourceRepository;
 
         public ICollectionRepository CollectionRepository => collectionRepository;
-
     }
 }

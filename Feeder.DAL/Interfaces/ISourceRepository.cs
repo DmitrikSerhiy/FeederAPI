@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Feeder.DAL.Interfaces
 {
-    public interface ISourceRepository
+    public interface ISourceRepository : IDisposable
     {
         Source GetSource(string Name);
         Source AddSource(string Name, string Url);

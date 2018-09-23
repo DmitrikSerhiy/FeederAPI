@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Feeder.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/sources")]
     [ApiController]
     public class SourceController : ControllerBase
     {
@@ -22,14 +22,14 @@ namespace Feeder.API.Controllers
             logger = LoggerFactory.CreateLogger<SourceController>();
         }
 
-        [HttpGet("{Name}", Name = "GetSource")]
-        public ActionResult GetSource(string Name)
+        [HttpGet("{sourceName}", Name = "GetSource")]
+        public ActionResult GetSource(string sourceName)
         {
-            var source = sourceService.GetSource(Name); 
+            var source = sourceService.GetSource(sourceName); 
 
             if (source != null)
             {
-                logger.LogInformation($"Source: {source?.Name}");
+                logger.LogInformation($"Source: {sourceName}");
                 return Ok(source);
             }
             return NotFound();
@@ -49,16 +49,16 @@ namespace Feeder.API.Controllers
         }
 
         [HttpPost(Name = "AddSource")]
-        public ActionResult AddSource(string Name, string Url)
+        public ActionResult AddSource(string sourceName, string url)
         {
-            if (sourceService.IsSourceNameValid(Name)) return Conflict($"Source {Name} is already created");
+            if (sourceService.IsSourceNameValid(sourceName)) return Conflict($"Source {sourceName} is already created");
 
-            var newSource = sourceService.AddSource(Name, Url);
+            var newSource = sourceService.AddSource(sourceName, url);
 
             if (newSource != null)
             {
                 logger.LogInformation($"Source {newSource?.Name} has been added");
-                return CreatedAtRoute("GetSources", new { Name }, newSource);
+                return CreatedAtRoute("GetSource", new { sourceName }, newSource);
             }
             return BadRequest();
         }

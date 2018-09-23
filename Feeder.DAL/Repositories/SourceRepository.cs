@@ -47,5 +47,10 @@ namespace Feeder.DAL.Repositories
         {
             feedContext.SaveChanges();
         }
+
+        public void Dispose()
+        {
+            feedContext.Dispose();
+        }
     }
 }

@@ -20,6 +20,6 @@ namespace Feeder.API
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .ConfigureLogging(l => l.SetMinimumLevel(LogLevel.Error));
+                .ConfigureLogging(l => l.SetMinimumLevel(LogLevel.Debug));
     }
 }

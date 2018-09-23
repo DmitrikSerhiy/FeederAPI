@@ -3,13 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading;
 
 namespace Freeder.BLL
 {
+
     public class Logger : ILogger
     {
         private string filePath;
-        private object _lock = new object();
+        static object locker = new object();
         public Logger(string path)
         {
             filePath = path;
@@ -29,9 +31,14 @@ namespace Freeder.BLL
         {
             if (formatter != null)
             {
-                lock (_lock)
+                try
                 {
+                    Monitor.Enter(locker);
                     File.AppendAllText(filePath, formatter(state, exception) + Environment.NewLine);
+                }
+                finally
+                {
+                    Monitor.Exit(locker);
                 }
             }
         }

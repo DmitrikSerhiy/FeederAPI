@@ -6,8 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Feeder.Controllers
 {
-    // [Produces("application/json")]
-    [Route("api/feed")]
+    [Route("api/feeds")]
     [ApiController]
     public class FeedController : ControllerBase
     {
@@ -22,47 +21,47 @@ namespace Feeder.Controllers
 
         }
 
-        [HttpGet(Name = "GetFeed")]
-        public ActionResult GetFeed(string title, string publishDate)
+        [HttpGet("{feedTitle}/{feedPublishDate}", Name = "GetFeed")]
+        public ActionResult GetFeed(string feedTitle, string feedPublishDate)
         {
-            var feed = feedService.GetFeed(title, publishDate);
+            var feed = feedService.GetFeed(feedTitle, feedPublishDate);
 
             if (feed != null) 
             {
                 logger.LogInformation($"Feed: {feed.Title}");
                 return Ok(feed);
             }
-            return NotFound($"There is no feed with title: {title}");
+            return NotFound($"There is no feed with title: {feedTitle}");
         }
 
-        [HttpGet("{source}", Name = "GetFeeds")]
-        public ActionResult GetFeeds(string source)
+        [HttpGet("{sourceName}", Name = "GetFeeds")]
+        public ActionResult GetFeeds(string sourceName)
         {
-            if (!feedService.IsSourceNameValid(source)) return Conflict("There is no such source in db");
+            if (!feedService.IsSourceNameValid(sourceName)) return Conflict("There is no such source in db");
 
-            var sourceDTO = feedService.GetFeeds(source);
+            var sourceDTO = feedService.GetFeeds(sourceName);
            
             if (sourceDTO != null)
             {
-                logger.LogInformation($"Feeds from {source}: {string.Join(", ", sourceDTO.Feeds.Select(s => s.Title))}");
+                logger.LogInformation($"Feeds from {sourceName}: {string.Join(", ", sourceDTO.Feeds.Select(s => s.Title))}");
                 return Ok(sourceDTO);
             }
             return NotFound();
         }
 
         [HttpPost(Name = "AddFeeds")]
-        public ActionResult AddFeed(string sourceName, string Type)
+        public ActionResult AddFeeds(string sourceName, string type)
         {
-            if (!feedService.IsFeedTypeValid(Type)) return Conflict("Invalid feed type. Use RSS or Atom");
+            if (!feedService.IsFeedTypeValid(type)) return Conflict("Invalid feed type. Use RSS or Atom");
 
             if (!feedService.IsSourceNameValid(sourceName)) return Conflict("There is no such source in db");
 
-            var sourceDTO = feedService.AddFeeds(sourceName, Type);
+            var sourceDTO = feedService.AddFeeds(sourceName, type);
 
             if (sourceDTO != null)
             {
                 logger.LogInformation($"Updated feeds for {sourceName}: {string.Join(", ", sourceDTO.Feeds.Select(s => s.Title))}");
-                return CreatedAtRoute("GetFeeds", new { source = sourceName }, sourceDTO);
+                return CreatedAtRoute("GetFeeds", new { sourceName }, sourceDTO);
             }
             return BadRequest();
         }

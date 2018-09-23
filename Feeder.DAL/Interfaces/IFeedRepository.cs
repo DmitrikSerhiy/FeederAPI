@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Feeder.DAL.Interfaces
 {
-    public interface IFeedRepository
+    public interface IFeedRepository : IDisposable
     {
         void AddFeed(Feed feed);
         bool IsFeedInSource(Feed feed, Source Id);

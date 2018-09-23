@@ -50,9 +50,29 @@ namespace Feeder.DAL.Repositories
             context.Sources.FirstOrDefault(s => s.Id == source.Id).CollectionId = collection.Id; 
         }
 
+        public bool IsCollectionContainSource(Collection collection, Source source)
+        {
+            return context.Collections
+                .Include(c => c.Sources)
+                .First(c => c.Id == collection.Id)
+                   .Sources.Any(s => s.Name == source.Name);
+        }
+
+        public void DeleteSourceFromCollection(string collectionName, string sourceName)
+        {
+            var collection = context.Collections.Include(c => c.Sources).First(c => c.Name == collectionName);
+            collection.Sources.First(s => s.Name == sourceName).CollectionId = null;
+
+        }
+
         public void Save()
         {
             context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            context.Dispose();
         }
     }
 }

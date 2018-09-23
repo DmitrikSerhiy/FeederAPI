@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Feeder.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/collections")]
     [ApiController]
     public class CollectionController : ControllerBase
     {
@@ -23,15 +23,15 @@ namespace Feeder.API.Controllers
             logger = LoggerFactory.CreateLogger<CollectionController>();
         }
 
-        [HttpGet("{CollectionName}", Name = "GetCollection")]
-        public ActionResult GetCollection(string CollectionName)
+        [HttpGet("{collectionName}", Name = "GetCollection")]
+        public ActionResult GetCollection(string collectionName)
         {
-            if (!collectionService.IsCollectionNameValid(CollectionName)) return Conflict("There is no such collection in db");
-            var col = collectionService.GetCollection(CollectionName);
+            if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict("There is no such collection in db");
+            var col = collectionService.GetCollection(collectionName);
 
             if (col != null)
             {
-                logger.LogInformation($"Collection: {col.Name}");
+                logger.LogInformation($"Collection: {collectionName}");
                 return Ok(col);
             }
             return NotFound();
@@ -50,24 +50,21 @@ namespace Feeder.API.Controllers
             return NotFound();
         }
 
-
-
-
-        [HttpPost("{CollectionName}", Name = "AddCollection")]
-        public ActionResult AddCollection(string CollectionName)
+        [HttpPost(Name = "AddCollection")]
+        public ActionResult AddCollection(string collectionName)
         {
-            if (collectionService.IsCollectionNameValid(CollectionName)) return Conflict($"{CollectionName} is already created");
-            var collection = collectionService.AddCollection(CollectionName);
+            if (collectionService.IsCollectionNameValid(collectionName)) return Conflict($"{collectionName} is already created");
+            var collection = collectionService.AddCollection(collectionName);
 
             if (collection != null)
             {
                 logger.LogInformation($"Collection created: {collection.Name}");
-                return CreatedAtRoute("GetCollection", new { CollectionName }, collection);
+                return CreatedAtRoute("GetCollection", new { collectionName }, collection);
             }
             return NotFound();
         }
 
-        [HttpPut(Name ="AddSourceToCollection")]
+        [HttpPut("{collectionName}/{sourceName}", Name = "AddSourceToCollection")]
         public ActionResult AddSourceToCollection(string collectionName, string sourceName)
         {
             if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName} collection");
@@ -78,13 +75,31 @@ namespace Feeder.API.Controllers
             if(collection != null)
             {
                 logger.LogInformation($"Source {sourceName} added to the collection {collectionName}");
-                return CreatedAtRoute("GetCollection", new { CollectionName = collectionName }, collection);
+                return CreatedAtRoute("GetCollection", new { collectionName }, collection);
             }
             return BadRequest();
         }
 
 
-        [HttpPut("{collectionName}", Name = "UpdateCollectionName")]
+        [HttpDelete(Name = "DeleteSourceFromCollection")]
+        public ActionResult DeleteSourceFromCollection(string collectionName, string sourceName)
+        {
+            if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName}");
+            if(!collectionService.IsCollectionContainSource(collectionName, sourceName)) return Conflict($"There is no {sourceName} in {collectionName}");
+
+            var isDeleted = collectionService.DeleteSourceFromCollection(collectionName, sourceName);
+
+            if (isDeleted)
+            {
+                logger.LogInformation($"Source {sourceName} deleted from {collectionName}");
+                return NoContent();
+            }
+            return NotFound();
+
+        }
+
+
+        [HttpPut(Name = "UpdateCollectionName")]
         public ActionResult UpdateCollectionName(string collectionName, string newName)
         {
             if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName} collection");
@@ -96,21 +111,21 @@ namespace Feeder.API.Controllers
             if(updatedCollection != null)
             {
                 logger.LogInformation($"Collection {collectionName} is changed to {newName}");
-                return CreatedAtRoute("GetCollection", new { CollectionName = collectionName }, updatedCollection);
+                return CreatedAtRoute("GetCollection", new { collectionName }, updatedCollection);
             }
             return BadRequest();
         }
 
-        [HttpDelete("{CollectionName}", Name="DeleteCollection")]
-        public ActionResult DeleteCollection(string CollectionName)
+        [HttpDelete("{collectionName}", Name="DeleteCollection")]
+        public ActionResult DeleteCollection(string collectionName)
         {
-            if (!collectionService.IsCollectionNameValid(CollectionName)) return Conflict($"There is no {CollectionName} collection");
+            if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName} collection");
 
-            var isDeleted = collectionService.DeleteCollection(CollectionName);
+            var isDeleted = collectionService.DeleteCollection(collectionName);
 
             if (isDeleted)
             {
-                logger.LogInformation($"Deleted collection : {CollectionName}");
+                logger.LogInformation($"Deleted collection : {collectionName}");
                 return NoContent();
             }
             return BadRequest();

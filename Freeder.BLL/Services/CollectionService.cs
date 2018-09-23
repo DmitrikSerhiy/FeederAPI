@@ -53,6 +53,21 @@ namespace Freeder.BLL.Services
             return Mapper.Map<CollectionDTO>(collectionRepository.GetCollection(collectionName));
         }
 
+        public bool IsCollectionContainSource(string collectionName, string sourceName)
+        {
+            var collection = collectionRepository.GetCollection(collectionName);
+            var source = sourceRepository.GetSource(sourceName);
+
+            return collectionRepository.IsCollectionContainSource(collection, source);
+        }
+
+        public bool DeleteSourceFromCollection(string collectionName, string sourceName)
+        {
+            collectionRepository.DeleteSourceFromCollection(collectionName, sourceName);
+            collectionRepository.Save();
+            return true;
+        }
+
         public bool DeleteCollection(string Name)
         {
             collectionRepository.DeleteCollection(Name);
