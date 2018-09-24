@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Freeder.BLL.CacheManagers;
 using Freeder.BLL.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,16 +20,20 @@ namespace Feeder.API.Controllers
     {
         private SourceService sourceService;
         private readonly ILogger logger;
+        private const int cacheExpiration = 300;
 
         /// <summary>
         ///     Used consructor injection to get all needed services 
         /// </summary>
         /// <param name="SourceService"></param>
         /// <param name="LoggerFactory"></param>
-        public SourceController(SourceService SourceService, ILoggerFactory LoggerFactory)
+        /// <param name="CacheManager"></param>
+        public SourceController(SourceService SourceService, ILoggerFactory LoggerFactory,
+            ICacheManager CacheManager)
         {
             sourceService = SourceService;
             logger = LoggerFactory.CreateLogger<SourceController>();
+            CacheManager.DurationInSeconds = cacheExpiration;
         }
 
 
@@ -37,6 +42,7 @@ namespace Feeder.API.Controllers
         /// </summary>
         /// <param name="sourceName"></param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpGet("{sourceName}", Name = "GetSource")]
         public ActionResult GetSource(string sourceName)
         {
@@ -73,6 +79,7 @@ namespace Feeder.API.Controllers
         /// <param name="sourceName">Name of the real site</param>
         /// <param name="url">Link to the real site</param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpPost(Name = "AddSource")]
         public ActionResult AddSource(string sourceName, string url)
         {

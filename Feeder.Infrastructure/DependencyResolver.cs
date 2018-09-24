@@ -28,6 +28,10 @@ namespace Feeder.Infrastructure
             serviceCollection.AddScoped<CacheManager<Collection>, CollectionCacheManager>();
             serviceCollection.AddScoped<CacheManager<Source>, SourceCacheManager>();
             serviceCollection.AddScoped<CacheManager<Feed>, FeedCacheManager>();
+
+            serviceCollection.AddScoped<ICacheManager, CollectionCacheManager>();
+            serviceCollection.AddScoped<ICacheManager, SourceCacheManager>();
+            serviceCollection.AddScoped<ICacheManager, FeedCacheManager>();
         }
     }
 }

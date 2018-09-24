@@ -8,12 +8,12 @@ namespace Freeder.BLL.CacheManagers
 {
     public class CollectionCacheManager : CacheManager<Collection>
     {
-        protected override string Determinant { get => "Collection"; set => Determinant = value; }
+        internal override string Determinant { get; set; } = "Collection";
 
         public CollectionCacheManager(IMemoryCache MemoryCache) : base(MemoryCache)
         {}
 
-        public override Collection Get(string collectionName, bool withIncludes)
+        internal override Collection Get(string collectionName, bool withIncludes)
         {
             if (withIncludes) Determinant += "WithIncludes";
 
@@ -22,7 +22,7 @@ namespace Freeder.BLL.CacheManagers
             return null;
         }
 
-        public override Collection Set(string collectionName, Collection collection, bool withIncludes)
+        internal override Collection Set(string collectionName, Collection collection, bool withIncludes)
         {
             if (withIncludes) Determinant += "WithIncludes";
 
@@ -30,7 +30,7 @@ namespace Freeder.BLL.CacheManagers
                 new MemoryCacheEntryOptions().SetAbsoluteExpiration(casheExpiration));
         }
 
-        public override void Remove(string collectionName, bool withIncludes)
+        internal override void Remove(string collectionName, bool withIncludes)
         {
             if (withIncludes) Determinant += "WithIncludes";
             cache.Remove(Determinant + collectionName);

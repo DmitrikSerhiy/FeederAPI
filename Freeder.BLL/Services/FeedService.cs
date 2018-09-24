@@ -79,7 +79,5 @@ namespace Freeder.BLL.Services
         {
             return Enum.IsDefined(typeof(FeedType), Type);
         }
-
-
     }
 }

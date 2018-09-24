@@ -8,21 +8,27 @@ using System.Text;
 
 namespace Freeder.BLL.CacheManagers
 {
-    public abstract class CacheManager<T> where T : class
+    public abstract class CacheManager<T> : ICacheManager where T : IModel
+
     {
-        protected IMemoryCache cache { get; set; }
-        protected TimeSpan casheExpiration { get; } = TimeSpan.FromMinutes(5);
-        protected abstract string Determinant { get; set; }
+        internal IMemoryCache cache { get; set; }
+        public int DurationInSeconds
+        {
+            get => (int)casheExpiration.TotalSeconds;
+            set => casheExpiration = new TimeSpan(0, 0, value);
+        }
+        internal TimeSpan casheExpiration { get;set; } = new TimeSpan(0, 0, 300);
+        internal abstract string Determinant { get; set; }
 
         public CacheManager(IMemoryCache MemoryCache)
         {
             cache = MemoryCache;
         }
 
-        public abstract T Get(string TName, bool withIncludes = false);
+        internal abstract T Get(string TName, bool withIncludes = false);
 
-        public abstract T Set(string TName, T entityToCache, bool withIncludes = false);
+        internal abstract T Set(string TName, T entityToCache, bool withIncludes = false);
 
-        public abstract void Remove(string TName, bool withIncludes = false);
+        internal abstract void Remove(string TName, bool withIncludes = false);
     }
 }

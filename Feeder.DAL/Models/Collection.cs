@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Feeder.DAL.Models
 {
-    public class Collection
+    public class Collection : IModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

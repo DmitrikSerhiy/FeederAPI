@@ -9,13 +9,14 @@
                 Handle all http requests with collections 
             </summary>
         </member>
-        <member name="M:Feeder.API.Controllers.CollectionController.#ctor(Freeder.BLL.Services.CollectionService,Freeder.BLL.Services.SourceService,Microsoft.Extensions.Logging.ILoggerFactory)">
+        <member name="M:Feeder.API.Controllers.CollectionController.#ctor(Freeder.BLL.Services.CollectionService,Freeder.BLL.Services.SourceService,Microsoft.Extensions.Logging.ILoggerFactory,Freeder.BLL.CacheManagers.ICacheManager)">
             <summary>
                 Used consructor injection to get all needed services 
             </summary>
             <param name="CollectionService"></param>
             <param name="SourceService"></param>
             <param name="LoggerFactory"></param>
+            <param name="CacheManager"></param>
         </member>
         <member name="M:Feeder.API.Controllers.CollectionController.GetCollection(System.String)">
             <summary>
@@ -23,6 +24,7 @@
             </summary>
             <param name="collectionName"></param>
             <returns></returns>
+            
         </member>
         <member name="M:Feeder.API.Controllers.CollectionController.GetCollections">
             <summary>
@@ -81,12 +83,13 @@
                 Use this to fill database with new sources
             </summary>
         </member>
-        <member name="M:Feeder.API.Controllers.SourceController.#ctor(Freeder.BLL.Services.SourceService,Microsoft.Extensions.Logging.ILoggerFactory)">
+        <member name="M:Feeder.API.Controllers.SourceController.#ctor(Freeder.BLL.Services.SourceService,Microsoft.Extensions.Logging.ILoggerFactory,Freeder.BLL.CacheManagers.ICacheManager)">
             <summary>
                 Used consructor injection to get all needed services 
             </summary>
             <param name="SourceService"></param>
             <param name="LoggerFactory"></param>
+            <param name="CacheManager"></param>
         </member>
         <member name="M:Feeder.API.Controllers.SourceController.GetSource(System.String)">
             <summary>
@@ -114,12 +117,13 @@
                 Handle all http requests with feeds 
             </summary>
         </member>
-        <member name="M:Feeder.Controllers.FeedController.#ctor(Freeder.BLL.Services.FeedService,Microsoft.Extensions.Logging.ILoggerFactory)">
+        <member name="M:Feeder.Controllers.FeedController.#ctor(Freeder.BLL.Services.FeedService,Microsoft.Extensions.Logging.ILoggerFactory,Freeder.BLL.CacheManagers.ICacheManager)">
             <summary>
                 Used consructor injection to get all needed services 
             </summary>
             <param name="FeedService"></param>
             <param name="LoggerFactory"></param>
+            <param name="CacheManager"></param>
         </member>
         <member name="M:Feeder.Controllers.FeedController.GetFeed(System.String,System.String)">
             <summary>

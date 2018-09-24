@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Freeder.BLL.CacheManagers;
 using Freeder.BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -15,18 +16,20 @@ namespace Feeder.Controllers
     {
         private FeedService feedService;
         private readonly ILogger logger;
+        private const int cacheExpiration = 300;
 
         /// <summary>
         ///     Used consructor injection to get all needed services 
         /// </summary>
         /// <param name="FeedService"></param>
         /// <param name="LoggerFactory"></param>
+        /// <param name="CacheManager"></param>
         public FeedController(FeedService FeedService,
-            ILoggerFactory LoggerFactory)
+            ILoggerFactory LoggerFactory, ICacheManager CacheManager)
         {
             feedService = FeedService;
             logger = LoggerFactory.CreateLogger<FeedController>();
-
+            CacheManager.DurationInSeconds = cacheExpiration;
         }
 
         /// <summary>
@@ -35,6 +38,7 @@ namespace Feeder.Controllers
         /// <param name="feedTitle"></param>
         /// <param name="feedPublishDate"></param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpGet("{feedTitle}/{feedPublishDate}", Name = "GetFeed")]
         public ActionResult GetFeed(string feedTitle, string feedPublishDate)
         {
@@ -53,6 +57,7 @@ namespace Feeder.Controllers
         /// </summary>
         /// <param name="sourceName"></param>
         /// <returns></returns>
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
         [HttpGet("{sourceName}", Name = "GetFeeds")]
         public ActionResult GetFeeds(string sourceName)
         {
@@ -74,6 +79,7 @@ namespace Feeder.Controllers
         /// <param name="sourceName"></param>
         /// <param name="type">RSS or Atom</param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpPost(Name = "AddFeeds")]
         public ActionResult AddFeeds(string sourceName, string type)
         {

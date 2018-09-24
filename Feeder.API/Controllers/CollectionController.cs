@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Freeder.BLL.CacheManagers;
 using Freeder.BLL.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,6 +20,7 @@ namespace Feeder.API.Controllers
         private CollectionService collectionService;
         private SourceService sourceService;
         private readonly ILogger logger;
+        private const int cacheExpiration = 350;
 
         /// <summary>
         ///     Used consructor injection to get all needed services 
@@ -26,12 +28,14 @@ namespace Feeder.API.Controllers
         /// <param name="CollectionService"></param>
         /// <param name="SourceService"></param>
         /// <param name="LoggerFactory"></param>
+        /// <param name="CacheManager"></param>
         public CollectionController(CollectionService CollectionService, SourceService SourceService,
-            ILoggerFactory LoggerFactory)
+            ILoggerFactory LoggerFactory, ICacheManager CacheManager)
         {
             collectionService = CollectionService;
             sourceService = SourceService;
             logger = LoggerFactory.CreateLogger<CollectionController>();
+            CacheManager.DurationInSeconds = cacheExpiration;
         }
 
         /// <summary>
@@ -39,6 +43,8 @@ namespace Feeder.API.Controllers
         /// </summary>
         /// <param name="collectionName"></param>
         /// <returns></returns>
+        /// 
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpGet("{collectionName}", Name = "GetCollection")]
         public ActionResult GetCollection(string collectionName)
         {
@@ -57,6 +63,7 @@ namespace Feeder.API.Controllers
         ///     Get all collections without sources
         /// </summary>
         /// <returns></returns>
+        [ResponseCache(NoStore =true, Location =ResponseCacheLocation.None)]
         [HttpGet(Name = "GetCollections")]
         public ActionResult GetCollections()
         {
@@ -75,6 +82,7 @@ namespace Feeder.API.Controllers
         /// </summary>
         /// <param name="collectionName"></param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpGet("view/{collectionName}", Name ="ViewCollection")]
         public ActionResult ViewCollection(string collectionName)
         {
@@ -95,6 +103,7 @@ namespace Feeder.API.Controllers
         /// </summary>
         /// <param name="collectionName"></param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpPost(Name = "AddCollection")]
         public ActionResult AddCollection(string collectionName)
         {
@@ -115,6 +124,7 @@ namespace Feeder.API.Controllers
         /// <param name="collectionName"></param>
         /// <param name="sourceName"></param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpPut("{collectionName}/{sourceName}", Name = "AddSourceToCollection")]
         public ActionResult AddSourceToCollection(string collectionName, string sourceName)
         {
@@ -137,6 +147,7 @@ namespace Feeder.API.Controllers
         /// <param name="collectionName"></param>
         /// <param name="sourceName"></param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpDelete(Name = "DeleteSourceFromCollection")]
         public ActionResult DeleteSourceFromCollection(string collectionName, string sourceName)
         {
@@ -160,6 +171,7 @@ namespace Feeder.API.Controllers
         /// <param name="collectionName"></param>
         /// <param name="newName"></param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpPut(Name = "UpdateCollectionName")]
         public ActionResult UpdateCollectionName(string collectionName, string newName)
         {
@@ -182,6 +194,7 @@ namespace Feeder.API.Controllers
         /// </summary>
         /// <param name="collectionName"></param>
         /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpDelete("{collectionName}", Name="DeleteCollection")]
         public ActionResult DeleteCollection(string collectionName)
         {

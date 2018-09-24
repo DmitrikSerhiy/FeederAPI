@@ -8,24 +8,24 @@ namespace Freeder.BLL.CacheManagers
 {
     public class FeedCacheManager : CacheManager<Feed>
     {
-        protected override string Determinant { get => "Feed"; set => Determinant = value; }
+        internal override string Determinant { get; set; } = "Feed";
         public FeedCacheManager(IMemoryCache MemoryCache) : base(MemoryCache)
         { }
 
-        public override Feed Get(string feedTitle, bool withIncludes=false)
+        internal override Feed Get(string feedTitle, bool withIncludes=false)
         {
             if (cache.TryGetValue(Determinant + feedTitle, out Feed feed))
                 return feed;
             return null;
         }
 
-        public override Feed Set(string feedTitle, Feed feed, bool withIncludes = false)
+        internal override Feed Set(string feedTitle, Feed feed, bool withIncludes = false)
         {
             return cache.Set(Determinant + feedTitle, feed,
                 new MemoryCacheEntryOptions().SetAbsoluteExpiration(casheExpiration));
         }
 
-        public override void Remove(string feedTitle, bool withIncludes = false)
+        internal override void Remove(string feedTitle, bool withIncludes = false)
         {
             cache.Remove(Determinant + feedTitle);
         }
