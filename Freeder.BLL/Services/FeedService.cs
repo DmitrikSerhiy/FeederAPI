@@ -2,6 +2,7 @@
 using Feeder.DAL;
 using Feeder.DAL.Interfaces;
 using Feeder.DAL.Models;
+using Freeder.BLL.CacheManagers;
 using Freeder.BLL.DTOs;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,14 @@ namespace Freeder.BLL.Services
     {
         private IFeedRepository feedRepository;
         private ISourceRepository sourceRepository;
-        public FeedService(IUnitOfWork UnitOfWork)
+        private FeedCacheManager feedCacheManager;
+        private SourceCacheManager sourceCacheManager;
+        public FeedService(IUnitOfWork UnitOfWork, CacheManager<Feed> FeedCacheManager, CacheManager<Source> SourceCacheManager)
         {
             feedRepository = UnitOfWork.FeedRepository;
             sourceRepository = UnitOfWork.SourceRepository;
+            feedCacheManager = (FeedCacheManager)FeedCacheManager;
+            sourceCacheManager = (SourceCacheManager)SourceCacheManager;
         }
 
         public SourceDTO AddFeeds(string sourceName, string Type)
@@ -45,17 +50,28 @@ namespace Freeder.BLL.Services
 
         public SourceDTO GetFeeds(string sourceName)
         {
-            return Mapper.Map<SourceDTO>(feedRepository.GetFeeds(sourceName));
+            var source = sourceCacheManager.Get(sourceName, true);
+            if(source == null)
+            {
+                source = feedRepository.GetFeeds(sourceName);
+                sourceCacheManager.Set(sourceName, source, true);
+            }
+            return Mapper.Map<SourceDTO>(source);
         }
 
         public FeedDTO GetFeed(string title, string publishDate)
         {
-            return Mapper.Map<FeedDTO>(feedRepository.GetFeed(title, publishDate));
+            var feed = feedCacheManager.Get(title);
+            if(feed == null)
+            {
+                feed = feedRepository.GetFeed(title, publishDate);
+                feedCacheManager.Set(title, feed);
+            }
+            return Mapper.Map<FeedDTO>(feed);
         }
 
         public bool IsSourceNameValid(string SourceName)
         {
-
             return sourceRepository.GetSource(SourceName) != null;
         }
 

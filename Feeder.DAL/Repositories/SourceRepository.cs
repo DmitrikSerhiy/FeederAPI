@@ -18,14 +18,7 @@ namespace Feeder.DAL.Repositories
 
         public Source AddSource(string Name, string Url)
         {
-            if (!feedContext.Sources.Any(s => s.Name == Name))
-            {
-                var source = new Source { Name = Name, Url = Url };
-                feedContext.Sources.Add(source);
-                feedContext.SaveChanges();
-                return source;
-            }
-            return null;
+            return feedContext.Sources.Add(new Source { Name = Name, Url = Url }).Entity;
         }
 
         public Source GetSource(string Name)

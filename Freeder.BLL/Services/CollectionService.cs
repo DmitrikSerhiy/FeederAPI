@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Feeder.DAL.Interfaces;
 using Feeder.DAL.Models;
+using Freeder.BLL.CacheManagers;
 using Freeder.BLL.DTOs;
 using System;
 using System.Collections.Generic;
@@ -13,15 +14,26 @@ namespace Freeder.BLL.Services
     {
         private ICollectionRepository collectionRepository;
         private ISourceRepository sourceRepository;
-        public CollectionService(IUnitOfWork UnitOfWork)
+        private CollectionCacheManager collectionCacheManager;
+        private SourceCacheManager sourceCacheManager;
+        public CollectionService(IUnitOfWork UnitOfWork, CacheManager<Collection> CollectionCacheManager,
+            CacheManager<Source> SourceCacheManager)
         {
             collectionRepository = UnitOfWork.CollectionRepository;
             sourceRepository = UnitOfWork.SourceRepository;
+            collectionCacheManager = (CollectionCacheManager)CollectionCacheManager;
+            sourceCacheManager = (SourceCacheManager)SourceCacheManager;
         }
 
-        public CollectionDTO GetCollection(string Name)
+        public CollectionDTO GetCollection(string collectionName)
         {
-            return Mapper.Map<CollectionDTO>(collectionRepository.GetCollection(Name));
+            Collection collection = collectionCacheManager.Get(collectionName, true);
+            if(collection == null)
+            {
+                collection = collectionRepository.GetCollection(collectionName);
+                collectionCacheManager.Set(collectionName, collection, true);
+            }
+            return Mapper.Map<CollectionDTO>(collection);
         }
 
         public IEnumerable<CollectionDTO> GetCollections()
@@ -29,36 +41,55 @@ namespace Freeder.BLL.Services
             return Mapper.Map<List<Collection>, List<CollectionDTO>>(collectionRepository.GetCollections().ToList());
         }
 
-        public CollectionDTO AddCollection(string Name)
+        public CollectionDTO AddCollection(string collectionName)
         {
-
-            var col = collectionRepository.AddCollection(Name);
+            var collection = collectionRepository.AddCollection(collectionName);
             collectionRepository.Save();
-            return Mapper.Map<CollectionDTO>(col);
+
+            collectionCacheManager.Set(collectionName, collection, false);
+
+            return Mapper.Map<CollectionDTO>(collection);
         }
 
         public CollectionDTO EditCollectionName(string collectionName, string newName)
         {
             collectionRepository.EditCollectionName(collectionName, newName);
             collectionRepository.Save();
-            return Mapper.Map<CollectionDTO>(collectionRepository.GetCollection(newName));
+
+            var collection = collectionRepository.GetCollection(newName);
+            collectionCacheManager.Set(newName, collection, true);
+
+            return Mapper.Map<CollectionDTO>(collection);
         }
 
         public CollectionDTO AddSourceToCollection(string sourceName, string collectionName)
         {
-            var source = sourceRepository.GetSource(sourceName);
-            var collection = collectionRepository.GetCollection(collectionName);
-            collectionRepository.AddSourceToCollection(source, collection);
+            var source = sourceCacheManager.Get(sourceName);
+            var collection = collectionCacheManager.Get(collectionName, true);
+
+            if (source == null)
+            {
+                source = sourceRepository.GetSource(sourceName);
+                sourceCacheManager.Set(sourceName, source);
+            }
+            if (collection == null)
+                collection = collectionRepository.GetCollection(collectionName);
+
+
+            collection = collectionRepository.AddSourceToCollection(sourceName, collection);
             collectionRepository.Save();
-            return Mapper.Map<CollectionDTO>(collectionRepository.GetCollection(collectionName));
+
+            sourceCacheManager.Remove(sourceName);
+            collectionCacheManager.Remove(collectionName, true);
+
+            collectionCacheManager.Set(collectionName, collection, true);
+
+            return Mapper.Map<CollectionDTO>(collection);
         }
 
         public bool IsCollectionContainSource(string collectionName, string sourceName)
         {
-            var collection = collectionRepository.GetCollection(collectionName);
-            var source = sourceRepository.GetSource(sourceName);
-
-            return collectionRepository.IsCollectionContainSource(collection, source);
+            return collectionRepository.IsCollectionContainSource(collectionName, sourceName);
         }
 
         public CollectionDTO ViewCollection(string collectionName)
@@ -73,10 +104,13 @@ namespace Freeder.BLL.Services
             return true;
         }
 
-        public bool DeleteCollection(string Name)
+        public bool DeleteCollection(string collectionName)
         {
-            collectionRepository.DeleteCollection(Name);
+            collectionRepository.DeleteCollection(collectionName);
             collectionRepository.Save();
+
+            collectionCacheManager.Remove(collectionName, true);
+            collectionCacheManager.Remove(collectionName, false);
             return true;
         }
 

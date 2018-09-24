@@ -1,7 +1,9 @@
 ﻿using Feeder.DAL;
 using Feeder.DAL.Interfaces;
+using Feeder.DAL.Models;
 using Feeder.DAL.Repositories;
 using Freeder.BLL;
+using Freeder.BLL.CacheManagers;
 using Freeder.BLL.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -22,6 +24,10 @@ namespace Feeder.Infrastructure
             serviceCollection.AddScoped<FeedService>();
             serviceCollection.AddScoped<SourceService>();
             serviceCollection.AddScoped<CollectionService>();
+
+            serviceCollection.AddScoped<CacheManager<Collection>, CollectionCacheManager>();
+            serviceCollection.AddScoped<CacheManager<Source>, SourceCacheManager>();
+            serviceCollection.AddScoped<CacheManager<Feed>, FeedCacheManager>();
         }
     }
 }

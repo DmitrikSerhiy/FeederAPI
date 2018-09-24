@@ -9,6 +9,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Feeder.API.Controllers
 {
+    /// <summary>
+    ///     Handle all http requests with collections 
+    /// </summary>
     [Route("api/collections")]
     [ApiController]
     public class CollectionController : ControllerBase
@@ -16,7 +19,15 @@ namespace Feeder.API.Controllers
         private CollectionService collectionService;
         private SourceService sourceService;
         private readonly ILogger logger;
-        public CollectionController(CollectionService CollectionService, SourceService SourceService, ILoggerFactory LoggerFactory)
+
+        /// <summary>
+        ///     Used consructor injection to get all needed services 
+        /// </summary>
+        /// <param name="CollectionService"></param>
+        /// <param name="SourceService"></param>
+        /// <param name="LoggerFactory"></param>
+        public CollectionController(CollectionService CollectionService, SourceService SourceService,
+            ILoggerFactory LoggerFactory)
         {
             collectionService = CollectionService;
             sourceService = SourceService;

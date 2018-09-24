@@ -9,6 +9,10 @@ using Microsoft.Extensions.Logging;
 
 namespace Feeder.API.Controllers
 {
+    /// <summary>
+    ///     Just for developers: becauce all the http methods returns Source entity without included feeeds
+    ///     Use this to fill database with new sources
+    /// </summary>
     [Route("api/sources")]
     [ApiController]
     public class SourceController : ControllerBase
@@ -16,6 +20,11 @@ namespace Feeder.API.Controllers
         private SourceService sourceService;
         private readonly ILogger logger;
 
+        /// <summary>
+        ///     Used consructor injection to get all needed services 
+        /// </summary>
+        /// <param name="SourceService"></param>
+        /// <param name="LoggerFactory"></param>
         public SourceController(SourceService SourceService, ILoggerFactory LoggerFactory)
         {
             sourceService = SourceService;

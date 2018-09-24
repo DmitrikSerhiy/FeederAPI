@@ -34,6 +34,12 @@ namespace Feeder
         private DependencyResolver dependencyResolver;
         private AutoMapperInitializatior autoMapperInitializatior;
 
+        /// <summary>
+        ///     Set the logger
+        ///     Set all dependincies
+        ///     Added swagger integration
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             var path = Path.Combine(Directory.GetCurrentDirectory(), "logger.txt");
@@ -49,6 +55,8 @@ namespace Feeder
             services.AddDbContext<FeedContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddMemoryCache();
+
             services.AddMvc();
             services.AddSwaggerGen(sg =>
             {
@@ -57,6 +65,7 @@ namespace Feeder
                 sg.IncludeXmlComments(xmlPath);
             });
         }
+
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {

@@ -6,6 +6,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Feeder.Controllers
 {
+    /// <summary>
+    ///     Handle all http requests with feeds 
+    /// </summary>
     [Route("api/feeds")]
     [ApiController]
     public class FeedController : ControllerBase
@@ -13,6 +16,11 @@ namespace Feeder.Controllers
         private FeedService feedService;
         private readonly ILogger logger;
 
+        /// <summary>
+        ///     Used consructor injection to get all needed services 
+        /// </summary>
+        /// <param name="FeedService"></param>
+        /// <param name="LoggerFactory"></param>
         public FeedController(FeedService FeedService,
             ILoggerFactory LoggerFactory)
         {

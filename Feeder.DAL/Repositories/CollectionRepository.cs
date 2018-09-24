@@ -18,7 +18,10 @@ namespace Feeder.DAL.Repositories
 
         public Collection GetCollection(string Name)
         {
-            return context.Collections.Include(c => c.Sources).FirstOrDefault(c => c.Name == Name);
+            return context.Collections
+                .Include(c => c.Sources)
+                    .ThenInclude(s => s.Feeds)
+                .FirstOrDefault(c => c.Name == Name);
         }
         public Collection AddCollection(string Name)
         {
@@ -45,17 +48,16 @@ namespace Feeder.DAL.Repositories
             context.Collections.FirstOrDefault(c => c.Name == collectionName).Name = newName;
         }
 
-        public void AddSourceToCollection(Source source, Collection collection)
+        public Collection AddSourceToCollection(string sourceName, Collection collection)
         {
-            context.Sources.FirstOrDefault(s => s.Id == source.Id).CollectionId = collection.Id; 
+            var source = context.Sources.FirstOrDefault(s => s.Name == sourceName).CollectionId = collection.Id; ;
+
+            return collection;
         }
 
-        public bool IsCollectionContainSource(Collection collection, Source source)
+        public bool IsCollectionContainSource(string collectionName, string sourceName)
         {
-            return context.Collections
-                .Include(c => c.Sources)
-                .First(c => c.Id == collection.Id)
-                   .Sources.Any(s => s.Name == source.Name);
+            return context.Collections.Include(c => c.Sources).Any(c => c.Sources.Any(s => s.Name == sourceName));
         }
 
         public void DeleteSourceFromCollection(string collectionName, string sourceName)
@@ -67,7 +69,10 @@ namespace Feeder.DAL.Repositories
 
         public Collection ViewCollection(string collectionName)
         {
-            return context.Collections.Include(c => c.Sources).ThenInclude(s => s.Feeds).FirstOrDefault(s => s.Name == collectionName);
+            return context.Collections
+                .Include(c => c.Sources)
+                    .ThenInclude(s => s.Feeds)
+                .FirstOrDefault(s => s.Name == collectionName);
         }
 
         public void Save()

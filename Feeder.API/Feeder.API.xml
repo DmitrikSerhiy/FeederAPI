@@ -4,6 +4,19 @@
         <name>Feeder.API</name>
     </assembly>
     <members>
+        <member name="T:Feeder.API.Controllers.CollectionController">
+            <summary>
+                Handle all http requests with collections 
+            </summary>
+        </member>
+        <member name="M:Feeder.API.Controllers.CollectionController.#ctor(Freeder.BLL.Services.CollectionService,Freeder.BLL.Services.SourceService,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+                Used consructor injection to get all needed services 
+            </summary>
+            <param name="CollectionService"></param>
+            <param name="SourceService"></param>
+            <param name="LoggerFactory"></param>
+        </member>
         <member name="M:Feeder.API.Controllers.CollectionController.GetCollection(System.String)">
             <summary>
                 Get specific collection
@@ -62,6 +75,19 @@
             <param name="collectionName"></param>
             <returns></returns>
         </member>
+        <member name="T:Feeder.API.Controllers.SourceController">
+            <summary>
+                Just for developers: becauce all the http methods returns Source entity without included feeeds
+                Use this to fill database with new sources
+            </summary>
+        </member>
+        <member name="M:Feeder.API.Controllers.SourceController.#ctor(Freeder.BLL.Services.SourceService,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+                Used consructor injection to get all needed services 
+            </summary>
+            <param name="SourceService"></param>
+            <param name="LoggerFactory"></param>
+        </member>
         <member name="M:Feeder.API.Controllers.SourceController.GetSource(System.String)">
             <summary>
                 Get specific source without feeds
@@ -82,6 +108,18 @@
             <param name="sourceName">Name of the real site</param>
             <param name="url">Link to the real site</param>
             <returns></returns>
+        </member>
+        <member name="T:Feeder.Controllers.FeedController">
+            <summary>
+                Handle all http requests with feeds 
+            </summary>
+        </member>
+        <member name="M:Feeder.Controllers.FeedController.#ctor(Freeder.BLL.Services.FeedService,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+                Used consructor injection to get all needed services 
+            </summary>
+            <param name="FeedService"></param>
+            <param name="LoggerFactory"></param>
         </member>
         <member name="M:Feeder.Controllers.FeedController.GetFeed(System.String,System.String)">
             <summary>
@@ -105,6 +143,14 @@
             <param name="sourceName"></param>
             <param name="type">RSS or Atom</param>
             <returns></returns>
+        </member>
+        <member name="M:Feeder.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+                Set the logger
+                Set all dependincies
+                Added swagger integration
+            </summary>
+            <param name="services"></param>
         </member>
     </members>
 </doc>

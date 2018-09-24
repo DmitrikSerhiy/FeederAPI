@@ -12,8 +12,8 @@ namespace Feeder.DAL.Interfaces
         IEnumerable<Collection> GetCollections();
         void DeleteCollection(string Name);
         void EditCollectionName(string collectionName, string newName);
-        void AddSourceToCollection(Source source, Collection collection);
-        bool IsCollectionContainSource(Collection collection, Source source);
+        Collection AddSourceToCollection(string sourceName, Collection collection);
+        bool IsCollectionContainSource(string collectionName, string sourceName);
         void DeleteSourceFromCollection(string collectionName, string sourceName);
         Collection ViewCollection(string collectionName);
         bool IsExist(string Name);

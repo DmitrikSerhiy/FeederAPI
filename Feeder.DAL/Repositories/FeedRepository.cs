@@ -35,10 +35,7 @@ namespace Feeder.DAL.Repositories
 
         public bool IsFeedInSource(Feed feed, Source source)
         {
-            return feedContext.Sources
-                .Include(s => s.Feeds)
-                .First(s => s.Id == source.Id)
-                    .Feeds.Any(f => f.PublishDate == feed.PublishDate && f.Title == feed.Title);
+            return feedContext.Sources.Include(s => s.Feeds).Any(s => s.Feeds.Contains(feed));
         }
 
         public void Save()
@@ -49,6 +46,11 @@ namespace Feeder.DAL.Repositories
         public void Dispose()
         {
             feedContext.Dispose();
+        }
+
+        public bool IsExist(string title, string publishDate)
+        {
+            return feedContext.Feeds.Any(f => f.Title == title && f.PublishDate == publishDate);
         }
     }
 }

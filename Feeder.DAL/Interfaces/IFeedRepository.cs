@@ -11,6 +11,7 @@ namespace Feeder.DAL.Interfaces
         bool IsFeedInSource(Feed feed, Source Id);
         Source GetFeeds(string sourceName);
         Feed GetFeed(string title, string publishDate);
+        bool IsExist(string title, string publishDate);
         void Save();
 
     }
