@@ -8,14 +8,14 @@ namespace Feeder.DAL.Interfaces
     public interface ICollectionRepository : IDisposable
     {
         Collection AddCollection(string Name);
-        Collection GetCollection(string Name);
-        IEnumerable<Collection> GetCollections();
+        Collection GetCollection(string Name, bool withIncludes);
+        Collection GetCollection(int Id, bool withIncludes);
+        IEnumerable<Collection> GetCollections(bool withIncludes);
         void DeleteCollection(string Name);
         void EditCollectionName(string collectionName, string newName);
-        Collection AddSourceToCollection(string sourceName, Collection collection);
-        bool IsCollectionContainSource(string collectionName, string sourceName);
-        void DeleteSourceFromCollection(string collectionName, string sourceName);
-        Collection ViewCollection(string collectionName);
+        Collection AddSourceToCollection(Collection collection, int sourceId);
+        bool HasSource(string collectionName, int sourceId);
+        void DeleteSourceFromCollection(string collectionName, int sourceId);
         bool IsExist(string Name);
         void Save();
     }

@@ -14,49 +14,18 @@ namespace Freeder.BLL.Services
     public class FeedService
     {
         private IFeedRepository feedRepository;
-        private ISourceRepository sourceRepository;
         private FeedCacheManager feedCacheManager;
         private SourceCacheManager sourceCacheManager;
         public FeedService(IUnitOfWork UnitOfWork, CacheManager<Feed> FeedCacheManager, CacheManager<Source> SourceCacheManager)
         {
             feedRepository = UnitOfWork.FeedRepository;
-            sourceRepository = UnitOfWork.SourceRepository;
             feedCacheManager = (FeedCacheManager)FeedCacheManager;
             sourceCacheManager = (SourceCacheManager)SourceCacheManager;
         }
 
-        public SourceDTO AddFeeds(string sourceName, string Type)
+        public List<FeedDTO> GetFeeds()
         {
-            var source = sourceRepository.GetSource(sourceName);
-
-            var url = sourceRepository.GetSource(sourceName)?.Url;
-            if (url != null)
-            {
-                XDocument feedXML = XDocument.Load(url);
-
-                foreach (var feed in FeedParcer.Parce(feedXML, Type))
-                {
-                    if(!feedRepository.IsFeedInSource(feed, source))
-                    {
-                        feed.SourceId = source.Id;
-                        feedRepository.AddFeed(feed);
-                    }
-                }
-                feedRepository.Save();
-                return Mapper.Map < SourceDTO > (feedRepository.GetFeeds(sourceName));
-            }
-            return null;
-        }
-
-        public SourceDTO GetFeeds(string sourceName)
-        {
-            var source = sourceCacheManager.Get(sourceName, true);
-            if(source == null)
-            {
-                source = feedRepository.GetFeeds(sourceName);
-                sourceCacheManager.Set(sourceName, source, true);
-            }
-            return Mapper.Map<SourceDTO>(source);
+            return Mapper.Map<List<Feed>, List<FeedDTO> >(feedRepository.GetFeeds().ToList());
         }
 
         public FeedDTO GetFeed(string title, string publishDate)
@@ -70,14 +39,20 @@ namespace Freeder.BLL.Services
             return Mapper.Map<FeedDTO>(feed);
         }
 
-        public bool IsSourceNameValid(string SourceName)
+        public FeedDTO GetFeed(int Id)
         {
-            return sourceRepository.GetSource(SourceName) != null;
+            var feed = feedCacheManager.Get(Id.ToString());
+            if (feed == null)
+            {
+                feed = feedRepository.GetFeed(Id);
+                feedCacheManager.Set(Id.ToString(), feed);
+            }
+            return Mapper.Map<FeedDTO>(feed);
         }
 
-        public bool IsFeedTypeValid(string Type)
+        public bool IsFeedValid(string title, string publishDate)
         {
-            return Enum.IsDefined(typeof(FeedType), Type);
+            return feedRepository.IsExist(title, publishDate);
         }
     }
 }

@@ -18,25 +18,20 @@
             <param name="LoggerFactory"></param>
             <param name="CacheManager"></param>
         </member>
-        <member name="M:Feeder.API.Controllers.CollectionController.GetCollection(System.String)">
+        <member name="M:Feeder.API.Controllers.CollectionController.GetCollection(System.String,System.Boolean)">
             <summary>
                 Get specific collection
             </summary>
             <param name="collectionName"></param>
+            <param name="withIncludes"></param>
             <returns></returns>
             
         </member>
-        <member name="M:Feeder.API.Controllers.CollectionController.GetCollections">
+        <member name="M:Feeder.API.Controllers.CollectionController.GetCollections(System.Boolean)">
             <summary>
-                Get all collections without sources
+                Get all collections
             </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Feeder.API.Controllers.CollectionController.ViewCollection(System.String)">
-            <summary>
-                Get specific collecton with included sources and feeds
-            </summary>
-            <param name="collectionName"></param>
+            <param name="withIncludes">Return collection with included sources and feeds or not</param>
             <returns></returns>
         </member>
         <member name="M:Feeder.API.Controllers.CollectionController.AddCollection(System.String)">
@@ -46,20 +41,20 @@
             <param name="collectionName"></param>
             <returns></returns>
         </member>
-        <member name="M:Feeder.API.Controllers.CollectionController.AddSourceToCollection(System.String,System.String)">
+        <member name="M:Feeder.API.Controllers.CollectionController.AddSourceToCollection(System.String,System.Int32)">
             <summary>
-                Add existed source to the specific collection
+                Add existed source to collection
             </summary>
             <param name="collectionName"></param>
-            <param name="sourceName"></param>
+            <param name="sourceId"></param>
             <returns></returns>
         </member>
-        <member name="M:Feeder.API.Controllers.CollectionController.DeleteSourceFromCollection(System.String,System.String)">
+        <member name="M:Feeder.API.Controllers.CollectionController.DeleteSourceFromCollection(System.String,System.Int32)">
             <summary>
                 Delete source from collection
             </summary>
             <param name="collectionName"></param>
-            <param name="sourceName"></param>
+            <param name="sourceId"></param>
             <returns></returns>
         </member>
         <member name="M:Feeder.API.Controllers.CollectionController.UpdateCollectionName(System.String,System.String)">
@@ -91,17 +86,26 @@
             <param name="LoggerFactory"></param>
             <param name="CacheManager"></param>
         </member>
-        <member name="M:Feeder.API.Controllers.SourceController.GetSource(System.String)">
+        <member name="M:Feeder.API.Controllers.SourceController.GetSourceById(System.Int32)">
             <summary>
-                Get specific source without feeds
+                Get Source without feeds by Id
             </summary>
-            <param name="sourceName"></param>
+            <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Feeder.API.Controllers.SourceController.GetSources">
+        <member name="M:Feeder.API.Controllers.SourceController.GetSources(System.Boolean)">
             <summary>
-                Get all sources without feeds
+                Get all the sources
             </summary>
+            <param name="withIncludes">Get sources with included feeds or not</param>
+            <returns></returns>
+        </member>
+        <member name="M:Feeder.API.Controllers.SourceController.AddFeedsToSource(System.Int32,System.String)">
+            <summary>
+                Download and add feeds for existed source
+            </summary>
+            <param name="sourceId"></param>
+            <param name="type">RSS or Atom</param>
             <returns></returns>
         </member>
         <member name="M:Feeder.API.Controllers.SourceController.AddSource(System.String,System.String)">
@@ -112,9 +116,16 @@
             <param name="url">Link to the real site</param>
             <returns></returns>
         </member>
+        <member name="M:Feeder.API.Controllers.SourceController.DeleteSourceById(System.Int32)">
+            <summary>
+                Remove source by Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
         <member name="T:Feeder.Controllers.FeedController">
             <summary>
-                Handle all http requests with feeds 
+                Handle all http requests with feeds
             </summary>
         </member>
         <member name="M:Feeder.Controllers.FeedController.#ctor(Freeder.BLL.Services.FeedService,Microsoft.Extensions.Logging.ILoggerFactory,Freeder.BLL.CacheManagers.ICacheManager)">
@@ -133,19 +144,17 @@
             <param name="feedPublishDate"></param>
             <returns></returns>
         </member>
-        <member name="M:Feeder.Controllers.FeedController.GetFeeds(System.String)">
+        <member name="M:Feeder.Controllers.FeedController.GetFeed(System.Int32)">
             <summary>
-                Get all feeds for specific source
+                Get specific feed by Id
             </summary>
-            <param name="sourceName"></param>
+            <param name="feedId"></param>
             <returns></returns>
         </member>
-        <member name="M:Feeder.Controllers.FeedController.AddFeeds(System.String,System.String)">
+        <member name="M:Feeder.Controllers.FeedController.GetFeeds">
             <summary>
-                Fill specific source with feeds
+                Get all existed feeds
             </summary>
-            <param name="sourceName"></param>
-            <param name="type">RSS or Atom</param>
             <returns></returns>
         </member>
         <member name="M:Feeder.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">

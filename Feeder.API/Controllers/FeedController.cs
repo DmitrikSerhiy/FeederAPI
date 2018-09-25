@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace Feeder.Controllers
 {
     /// <summary>
-    ///     Handle all http requests with feeds 
+    ///     Handle all http requests with feeds
     /// </summary>
     [Route("api/feeds")]
     [ApiController]
@@ -44,7 +44,7 @@ namespace Feeder.Controllers
         {
             var feed = feedService.GetFeed(feedTitle, feedPublishDate);
 
-            if (feed != null) 
+            if (feed != null)
             {
                 logger.LogInformation($"Feed: {feed.Title}");
                 return Ok(feed);
@@ -53,49 +53,40 @@ namespace Feeder.Controllers
         }
 
         /// <summary>
-        ///     Get all feeds for specific source
+        ///     Get specific feed by Id
         /// </summary>
-        /// <param name="sourceName"></param>
+        /// <param name="feedId"></param>
         /// <returns></returns>
-        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
-        [HttpGet("{sourceName}", Name = "GetFeeds")]
-        public ActionResult GetFeeds(string sourceName)
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
+        [HttpGet("{feedId}", Name = "GetFeedById")]
+        public ActionResult GetFeed(int feedId)
         {
-            if (!feedService.IsSourceNameValid(sourceName)) return Conflict("There is no such source in db");
+            var feed = feedService.GetFeed(feedId);
 
-            var sourceDTO = feedService.GetFeeds(sourceName);
-           
-            if (sourceDTO != null)
+            if (feed != null)
             {
-                logger.LogInformation($"Feeds from {sourceName}: {string.Join(", ", sourceDTO.Feeds.Select(s => s.Title))}");
-                return Ok(sourceDTO);
+                logger.LogInformation($"Feed: {feed.Title}");
+                return Ok(feed);
             }
             return NotFound();
         }
 
         /// <summary>
-        ///     Fill specific source with feeds
+        ///     Get all existed feeds
         /// </summary>
-        /// <param name="sourceName"></param>
-        /// <param name="type">RSS or Atom</param>
         /// <returns></returns>
-        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
-        [HttpPost(Name = "AddFeeds")]
-        public ActionResult AddFeeds(string sourceName, string type)
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
+        [HttpGet(Name = "GetFeeds")]
+        public ActionResult GetFeeds()
         {
-            if (!feedService.IsFeedTypeValid(type)) return Conflict("Invalid feed type. Use RSS or Atom");
+            var feeds = feedService.GetFeeds();
 
-            if (!feedService.IsSourceNameValid(sourceName)) return Conflict("There is no such source in db");
-
-            var sourceDTO = feedService.AddFeeds(sourceName, type);
-
-            if (sourceDTO != null)
+            if (feeds.Count != 0)
             {
-                logger.LogInformation($"Updated feeds for {sourceName}: {string.Join(", ", sourceDTO.Feeds.Select(s => s.Title))}");
-                return CreatedAtRoute("GetFeeds", new { sourceName }, sourceDTO);
+                logger.LogInformation($"Feeds: {string.Join(", ", feeds.Select(s => s.Title))}");
+                return Ok(feeds);
             }
-            return BadRequest();
+            return NotFound();
         }
-
     }
 }

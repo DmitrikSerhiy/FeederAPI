@@ -16,16 +16,9 @@ namespace Feeder.DAL.Repositories
             feedContext = FeedContext;
         }
 
-        public void AddFeed(Feed feed)
+        public IEnumerable<Feed> GetFeeds()
         {
-            feedContext.Feeds.Add(feed);
-        }
-
-        public Source GetFeeds(string sourceName)
-        {
-            return feedContext.Sources
-                .Include(s => s.Feeds)
-                .FirstOrDefault(s => s.Name == sourceName);
+            return feedContext.Feeds.ToList();
         }
 
         public Feed GetFeed(string title, string publishDate)
@@ -33,9 +26,9 @@ namespace Feeder.DAL.Repositories
             return feedContext.Feeds.FirstOrDefault(f => f.Title == title && f.PublishDate == publishDate);
         }
 
-        public bool IsFeedInSource(Feed feed, Source source)
+        public Feed GetFeed(int Id)
         {
-            return feedContext.Sources.Include(s => s.Feeds).Any(s => s.Feeds.Contains(feed));
+            return feedContext.Feeds.FirstOrDefault(f => f.Id == Id);
         }
 
         public void Save()

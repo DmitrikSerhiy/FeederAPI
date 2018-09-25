@@ -16,29 +16,41 @@ namespace Freeder.BLL
             {
                 case "RSS":
                     {
-                        return from feed in feedXML.Root.Descendants().First(i => i.Name.LocalName == "channel").Elements().Where(i => i.Name.LocalName == "item")
-                               select new Feed()
-                               {
-                                   Type = FeedType.RSS,
-                                   Content = feed.Elements().First(i => i.Name.LocalName == "description").Value,
-                                   Link = feed.Elements().First(i => i.Name.LocalName == "link").Value,
-                                   PublishDate = feed.Elements().First(i => i.Name.LocalName == "pubDate").Value,
-                                   Title = feed.Elements().First(i => i.Name.LocalName == "title").Value,
-                                  // Author = feed.Elements().First(i => i.Name.LocalName == "managingEditor").Value,
-                               };
+                        try
+                        {
+                            return from feed in feedXML.Root.Descendants().First(i => i.Name.LocalName == "channel").Elements().Where(i => i.Name.LocalName == "item")
+                                   select new Feed()
+                                   {
+                                       Type = FeedType.RSS,
+                                       Content = feed.Elements().First(i => i.Name.LocalName == "description").Value,
+                                       Link = feed.Elements().First(i => i.Name.LocalName == "link").Value,
+                                       PublishDate = feed.Elements().First(i => i.Name.LocalName == "pubDate").Value,
+                                       Title = feed.Elements().First(i => i.Name.LocalName == "title").Value,
+                                   };
+                        }
+                        catch
+                        {
+                            return null;
+                        }
                     }
                 case "Atom"://not tested
                     {
-                        return from feed in feedXML.Root.Elements().Where(i => i.Name.LocalName == "entry")
-                               select new Feed()
-                               {
-                                   Type = FeedType.Atom,
-                                   Content = feed.Elements().First(i => i.Name.LocalName == "content").Value,
-                                   Link = feed.Elements().First(i => i.Name.LocalName == "link").Attribute("href").Value,
-                                   PublishDate = feed.Elements().First(i => i.Name.LocalName == "published").Value,
-                                   Title = feed.Elements().First(i => i.Name.LocalName == "title").Value,
-                                   //Author = feed.Elements().First(i => i.Name.LocalName == "author").Value
-                               };
+                        try
+                        {
+                            return from feed in feedXML.Root.Elements().Where(i => i.Name.LocalName == "entry")
+                                   select new Feed()
+                                   {
+                                       Type = FeedType.Atom,
+                                       Content = feed.Elements().First(i => i.Name.LocalName == "content").Value,
+                                       Link = feed.Elements().First(i => i.Name.LocalName == "link").Attribute("href").Value,
+                                       PublishDate = feed.Elements().First(i => i.Name.LocalName == "published").Value,
+                                       Title = feed.Elements().First(i => i.Name.LocalName == "title").Value,
+                                   };
+                        }
+                        catch
+                        {
+                            return null;
+                        }
                     }
                 default: return null;
             }

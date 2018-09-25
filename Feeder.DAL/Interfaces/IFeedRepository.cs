@@ -7,9 +7,8 @@ namespace Feeder.DAL.Interfaces
 {
     public interface IFeedRepository : IDisposable
     {
-        void AddFeed(Feed feed);
-        bool IsFeedInSource(Feed feed, Source Id);
-        Source GetFeeds(string sourceName);
+        IEnumerable<Feed> GetFeeds();
+        Feed GetFeed(int Id);
         Feed GetFeed(string title, string publishDate);
         bool IsExist(string title, string publishDate);
         void Save();

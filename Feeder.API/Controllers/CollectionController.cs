@@ -42,14 +42,15 @@ namespace Feeder.API.Controllers
         ///     Get specific collection
         /// </summary>
         /// <param name="collectionName"></param>
+        /// <param name="withIncludes"></param>
         /// <returns></returns>
         /// 
         [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpGet("{collectionName}", Name = "GetCollection")]
-        public ActionResult GetCollection(string collectionName)
+        public ActionResult GetCollection(string collectionName, bool withIncludes)
         {
             if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict("There is no such collection in db");
-            var col = collectionService.GetCollection(collectionName);
+            var col = collectionService.GetCollection(collectionName, withIncludes);
 
             if (col != null)
             {
@@ -60,14 +61,15 @@ namespace Feeder.API.Controllers
         }
 
         /// <summary>
-        ///     Get all collections without sources
+        ///     Get all collections
         /// </summary>
+        /// <param name="withIncludes">Return collection with included sources and feeds or not</param>
         /// <returns></returns>
         [ResponseCache(NoStore =true, Location =ResponseCacheLocation.None)]
         [HttpGet(Name = "GetCollections")]
-        public ActionResult GetCollections()
+        public ActionResult GetCollections(bool withIncludes)
         {
-            var collections = collectionService.GetCollections();
+            var collections = collectionService.GetCollections(withIncludes);
 
             if (collections.Count() != 0)
             {
@@ -77,26 +79,6 @@ namespace Feeder.API.Controllers
             return NotFound();
         }
 
-        /// <summary>
-        ///     Get specific collecton with included sources and feeds
-        /// </summary>
-        /// <param name="collectionName"></param>
-        /// <returns></returns>
-        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
-        [HttpGet("view/{collectionName}", Name ="ViewCollection")]
-        public ActionResult ViewCollection(string collectionName)
-        {
-            if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName} collection");
-
-            var collection = collectionService.ViewCollection(collectionName);
-
-            if(collection != null)
-            {
-                logger.LogInformation($"Collection {collectionName} with sources: {string.Join(", ", collection.Sources.Select(s => s.Name))}");
-                return Ok(collection);
-            }
-            return BadRequest();
-        }
 
         /// <summary>
         ///     Add new collection
@@ -119,25 +101,22 @@ namespace Feeder.API.Controllers
         }
 
         /// <summary>
-        ///     Add existed source to the specific collection
+        ///     Add existed source to collection
         /// </summary>
         /// <param name="collectionName"></param>
-        /// <param name="sourceName"></param>
+        /// <param name="sourceId"></param>
         /// <returns></returns>
         [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
-        [HttpPut("{collectionName}/{sourceName}", Name = "AddSourceToCollection")]
-        public ActionResult AddSourceToCollection(string collectionName, string sourceName)
+        [HttpPut("{collectionName}/{sourceId}", Name = "AddSourceToCollection")]
+        public ActionResult AddSourceToCollection(string collectionName, int sourceId)
         {
             if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName} collection");
-            if(!sourceService.IsSourceNameValid(sourceName)) return Conflict($"There is no {sourceName} source");
+            if (!sourceService.IsSourceValid(sourceId)) return Conflict($"There is no such source");
 
-            var collection = collectionService.AddSourceToCollection(sourceName, collectionName);
+            var collection = collectionService.AddSourceToCollection(collectionName, sourceId);
 
-            if(collection != null)
-            {
-                logger.LogInformation($"Source {sourceName} added to the collection {collectionName}");
-                return CreatedAtRoute("GetCollection", new { collectionName }, collection);
-            }
+            if (collection != null)
+                return CreatedAtRoute("GetCollection", new { collectionName, withIncludes = true }, collection);
             return BadRequest();
         }
 
@@ -145,20 +124,20 @@ namespace Feeder.API.Controllers
         ///     Delete source from collection
         /// </summary>
         /// <param name="collectionName"></param>
-        /// <param name="sourceName"></param>
+        /// <param name="sourceId"></param>
         /// <returns></returns>
-        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
         [HttpDelete(Name = "DeleteSourceFromCollection")]
-        public ActionResult DeleteSourceFromCollection(string collectionName, string sourceName)
+        public ActionResult DeleteSourceFromCollection(string collectionName, int sourceId)
         {
             if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName}");
-            if(!collectionService.IsCollectionContainSource(collectionName, sourceName)) return Conflict($"There is no {sourceName} in {collectionName}");
+            if (!collectionService.IsCollectionContainSource(collectionName, sourceId)) return Conflict($"There is no such in {collectionName}");
 
-            var isDeleted = collectionService.DeleteSourceFromCollection(collectionName, sourceName);
+            var isDeleted = collectionService.DeleteSourceFromCollection(collectionName, sourceId);
 
             if (isDeleted)
             {
-                logger.LogInformation($"Source {sourceName} deleted from {collectionName}");
+                logger.LogInformation($"Source {sourceId} deleted from {collectionName}");
                 return NoContent();
             }
             return NotFound();
@@ -181,10 +160,10 @@ namespace Feeder.API.Controllers
 
             var updatedCollection = collectionService.EditCollectionName(collectionName, newName);
 
-            if(updatedCollection != null)
+            if (updatedCollection != null)
             {
                 logger.LogInformation($"Collection {collectionName} is changed to {newName}");
-                return CreatedAtRoute("GetCollection", new { collectionName }, updatedCollection);
+                return CreatedAtRoute("GetCollection", new { collectionName, withIncludes = true }, updatedCollection);
             }
             return BadRequest();
         }
@@ -194,8 +173,8 @@ namespace Feeder.API.Controllers
         /// </summary>
         /// <param name="collectionName"></param>
         /// <returns></returns>
-        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
-        [HttpDelete("{collectionName}", Name="DeleteCollection")]
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
+        [HttpDelete("{collectionName}", Name = "DeleteCollection")]
         public ActionResult DeleteCollection(string collectionName)
         {
             if (!collectionService.IsCollectionNameValid(collectionName)) return Conflict($"There is no {collectionName} collection");

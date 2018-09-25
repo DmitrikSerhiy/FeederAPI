@@ -25,20 +25,20 @@ namespace Freeder.BLL.Services
             sourceCacheManager = (SourceCacheManager)SourceCacheManager;
         }
 
-        public CollectionDTO GetCollection(string collectionName)
+        public CollectionDTO GetCollection(string collectionName, bool withIncludes)
         {
-            Collection collection = collectionCacheManager.Get(collectionName, true);
+            Collection collection = collectionCacheManager.Get(collectionName, withIncludes);
             if(collection == null)
             {
-                collection = collectionRepository.GetCollection(collectionName);
-                collectionCacheManager.Set(collectionName, collection, true);
+                collection = collectionRepository.GetCollection(collectionName, withIncludes);
+                collectionCacheManager.Set(collectionName, collection, withIncludes);
             }
             return Mapper.Map<CollectionDTO>(collection);
         }
 
-        public IEnumerable<CollectionDTO> GetCollections()
+        public IEnumerable<CollectionDTO> GetCollections(bool withIncludes)
         {
-            return Mapper.Map<List<Collection>, List<CollectionDTO>>(collectionRepository.GetCollections().ToList());
+            return Mapper.Map<List<Collection>, List<CollectionDTO>>(collectionRepository.GetCollections(withIncludes).ToList());
         }
 
         public CollectionDTO AddCollection(string collectionName)
@@ -56,50 +56,34 @@ namespace Freeder.BLL.Services
             collectionRepository.EditCollectionName(collectionName, newName);
             collectionRepository.Save();
 
-            var collection = collectionRepository.GetCollection(newName);
+            var collection = collectionRepository.GetCollection(newName, true);
             collectionCacheManager.Set(newName, collection, true);
 
             return Mapper.Map<CollectionDTO>(collection);
         }
 
-        public CollectionDTO AddSourceToCollection(string sourceName, string collectionName)
+        public CollectionDTO AddSourceToCollection(string collectionName, int sourceId)
         {
-            var source = sourceCacheManager.Get(sourceName);
-            var collection = collectionCacheManager.Get(collectionName, true);
+            var source = sourceRepository.GetSource(sourceId);
+            var collection = collectionRepository.GetCollection(collectionName, true);
 
-            if (source == null)
-            {
-                source = sourceRepository.GetSource(sourceName);
-                sourceCacheManager.Set(sourceName, source);
-            }
-            if (collection == null)
-                collection = collectionRepository.GetCollection(collectionName);
-
-
-            collection = collectionRepository.AddSourceToCollection(sourceName, collection);
+            collection = collectionRepository.AddSourceToCollection(collection, sourceId);
             collectionRepository.Save();
 
-            sourceCacheManager.Remove(sourceName);
-            collectionCacheManager.Remove(collectionName, true);
-
+            sourceCacheManager.Set(source.ToString(), source);
             collectionCacheManager.Set(collectionName, collection, true);
 
             return Mapper.Map<CollectionDTO>(collection);
         }
 
-        public bool IsCollectionContainSource(string collectionName, string sourceName)
+        public bool IsCollectionContainSource(string collectionName, int sourceId)
         {
-            return collectionRepository.IsCollectionContainSource(collectionName, sourceName);
+            return collectionRepository.HasSource(collectionName, sourceId);
         }
 
-        public CollectionDTO ViewCollection(string collectionName)
+        public bool DeleteSourceFromCollection(string collectionName, int sourceId)
         {
-            return Mapper.Map<CollectionDTO>(collectionRepository.ViewCollection(collectionName));
-        }
-
-        public bool DeleteSourceFromCollection(string collectionName, string sourceName)
-        {
-            collectionRepository.DeleteSourceFromCollection(collectionName, sourceName);
+            collectionRepository.DeleteSourceFromCollection(collectionName, sourceId);
             collectionRepository.Save();
             return true;
         }

@@ -37,33 +37,55 @@ namespace Feeder.API.Controllers
         }
 
 
+        ///// <summary>
+        /////     Get specific source by name and url
+        ///// </summary>
+        ///// <param name="sourceName"></param>
+        ///// <param name="url"></param>
+        ///// <returns></returns>
+        //[ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
+        //[HttpGet("{sourceName}/{url}", Name = "GetSource")]
+        //public ActionResult GetSource(string sourceName, string url)
+        //{
+        //    var source = sourceService.GetSource(sourceName, url);
+
+        //    if (source != null)
+        //    {
+        //        logger.LogInformation($"Source: {sourceName}");
+        //        return Ok(source);
+        //    }
+        //    return NotFound();
+        //}
+
         /// <summary>
-        ///     Get specific source without feeds
+        ///     Get Source without feeds by Id
         /// </summary>
-        /// <param name="sourceName"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
-        [HttpGet("{sourceName}", Name = "GetSource")]
-        public ActionResult GetSource(string sourceName)
+        [HttpGet("{id}", Name = "GetSourceById")]
+        public ActionResult GetSourceById(int id)
         {
-            var source = sourceService.GetSource(sourceName); 
+            var source = sourceService.GetSource(id);
 
             if (source != null)
             {
-                logger.LogInformation($"Source: {sourceName}");
+                logger.LogInformation($"Source: {source.Name}");
                 return Ok(source);
             }
             return NotFound();
         }
 
         /// <summary>
-        ///     Get all sources without feeds
+        ///     Get all the sources
         /// </summary>
+        /// <param name="withIncludes">Get sources with included feeds or not</param>
         /// <returns></returns>
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
         [HttpGet(Name = "GetSources")]
-        public ActionResult GetSources()
+        public ActionResult GetSources(bool withIncludes)
         {
-            var sources = sourceService.GetSources();
+            var sources = sourceService.GetSources(withIncludes);
 
             if (sources != null)
             {
@@ -72,6 +94,27 @@ namespace Feeder.API.Controllers
             }
             return NotFound();
         }
+
+        /// <summary>
+        ///     Download and add feeds for existed source
+        /// </summary>
+        /// <param name="sourceId"></param>
+        /// <param name="type">RSS or Atom</param>
+        /// <returns></returns>
+        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
+        [HttpPut("{sourceId}/{type}", Name = "AddFeedsToSource")]
+        public ActionResult AddFeedsToSource(int sourceId, string type)
+        {
+            if (!sourceService.IsSourceValid(sourceId)) return Conflict("There is no such source");
+            if (!sourceService.IsFeedTypeValid(type)) return Conflict($"{type} - nvalid feed type. Try RSS or Atom");
+
+            var source = sourceService.AddFeeds(sourceId, type);
+            if(source != null)
+                return CreatedAtRoute("GetSourceById", new { id = sourceId }, source);
+            return BadRequest();
+        }
+
+
 
         /// <summary>
         ///     Add new source
@@ -83,15 +126,55 @@ namespace Feeder.API.Controllers
         [HttpPost(Name = "AddSource")]
         public ActionResult AddSource(string sourceName, string url)
         {
-            if (sourceService.IsSourceNameValid(sourceName)) return Conflict($"Source {sourceName} is already created");
+            if (sourceService.IsSourceValid(sourceName, url)) return Conflict($"Source {sourceName} with url {url} is already created");
 
             var newSource = sourceService.AddSource(sourceName, url);
 
             if (newSource != null)
             {
-                logger.LogInformation($"Source {newSource?.Name} has been added");
-                return CreatedAtRoute("GetSource", new { sourceName }, newSource);
+                logger.LogInformation($"Source {newSource?.Name} with url {url} has been added");
+                return CreatedAtRoute("GetSourceById", new { id = newSource.Id }, newSource);
             }
+            return BadRequest();
+        }
+
+        ///// <summary>
+        /////     Remove source by name and url
+        ///// </summary>
+        ///// <param name="sourceName"></param>
+        ///// <param name="url"></param>
+        ///// <returns></returns>
+        //[ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
+        //[HttpDelete("{sourceName}/{url}", Name = "DeleteSource")]
+        //public ActionResult DeleteSource(string sourceName, string url)
+        //{
+        //    if (!sourceService.IsSourceValid(sourceName, url)) return Conflict($"There is no {sourceName} with url {url}");
+
+        //    sourceService.DeleteSource(sourceName, url);
+
+        //    if (!sourceService.IsSourceValid(sourceName, url))
+        //    {
+        //        logger.LogInformation($"Deleted source: {sourceName} with url {url}");
+        //        return NoContent();
+        //    }
+        //    return BadRequest();
+        //}
+
+        /// <summary>
+        ///     Remove source by Id
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
+        [HttpDelete("{Id}", Name = "DeleteSourceById")]
+        public ActionResult DeleteSourceById(int Id)
+        {
+            if (!sourceService.IsSourceValid(Id)) return Conflict($"There is no such source");
+
+            sourceService.DeleteSource(Id);
+
+            if (!sourceService.IsSourceValid(Id))
+                return NoContent();
             return BadRequest();
         }
     }

@@ -7,6 +7,7 @@ namespace Freeder.BLL.DTOs
 {
     public class FeedDTO
     {
+        public int Id { get; set; }
         public string Link { get; set; }
         public string Title { get; set; }
         //public string Author { get; set; }

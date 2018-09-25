@@ -16,13 +16,27 @@ namespace Feeder.DAL.Repositories
             context = Context;
         }
 
-        public Collection GetCollection(string Name)
+        public Collection GetCollection(string Name, bool withIncludes)
         {
-            return context.Collections
+            if(withIncludes) return context.Collections
                 .Include(c => c.Sources)
                     .ThenInclude(s => s.Feeds)
                 .FirstOrDefault(c => c.Name == Name);
+
+            return context.Collections.FirstOrDefault(c => c.Name == Name);
         }
+
+
+        public Collection GetCollection(int Id, bool withIncludes)
+        {
+            if (withIncludes) return context.Collections
+                    .Include(c => c.Sources)
+                        .FirstOrDefault(c => c.Id == Id);
+
+            return context.Collections.FirstOrDefault(c => c.Id == Id);
+        }
+
+
         public Collection AddCollection(string Name)
         {
             return context.Collections.Add(new Collection() { Name = Name }).Entity;
@@ -33,9 +47,14 @@ namespace Feeder.DAL.Repositories
             return context.Collections.Any(c => c.Name == Name);
         }
 
-        public IEnumerable<Collection> GetCollections()
+        public IEnumerable<Collection> GetCollections(bool withIncludes)
         {
-            return context.Collections.Include(c => c.Sources).ToList();
+            if (withIncludes) return context.Collections
+                     .Include(c => c.Sources)
+                         .ThenInclude(s => s.Feeds)
+                     .ToList();
+
+            return context.Collections.ToList();
         }
 
         public void DeleteCollection(string Name)
@@ -48,31 +67,25 @@ namespace Feeder.DAL.Repositories
             context.Collections.FirstOrDefault(c => c.Name == collectionName).Name = newName;
         }
 
-        public Collection AddSourceToCollection(string sourceName, Collection collection)
+        public Collection AddSourceToCollection(Collection collection, int sourceId)
         {
-            var source = context.Sources.FirstOrDefault(s => s.Name == sourceName).CollectionId = collection.Id; ;
+            context.Sources.FirstOrDefault(s => s.Id == sourceId).CollectionId = collection.Id;
 
             return collection;
         }
 
-        public bool IsCollectionContainSource(string collectionName, string sourceName)
-        {
-            return context.Collections.Include(c => c.Sources).Any(c => c.Sources.Any(s => s.Name == sourceName));
-        }
-
-        public void DeleteSourceFromCollection(string collectionName, string sourceName)
+        public bool HasSource(string collectionName, int sourceId)
         {
             var collection = context.Collections.Include(c => c.Sources).First(c => c.Name == collectionName);
-            collection.Sources.First(s => s.Name == sourceName).CollectionId = null;
 
+            return collection.Sources.Any(s => s.Id == sourceId);
         }
 
-        public Collection ViewCollection(string collectionName)
+        public void DeleteSourceFromCollection(string collectionName, int sourceId)
         {
-            return context.Collections
-                .Include(c => c.Sources)
-                    .ThenInclude(s => s.Feeds)
-                .FirstOrDefault(s => s.Name == collectionName);
+            var collection = context.Collections.Include(c => c.Sources).First(c => c.Name == collectionName);
+            collection.Sources.First(s => s.Id == sourceId).CollectionId = null;
+
         }
 
         public void Save()
