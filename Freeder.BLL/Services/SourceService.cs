@@ -22,15 +22,6 @@ namespace Freeder.BLL.Services
             sourceCacheManager = (SourceCacheManager)CacheManager;
         }
 
-        public SourceDTO AddSource(string Name, string Url)
-        {
-            var source = sourceRepository.AddSource(Name, Url);
-            sourceRepository.Save();
-            sourceCacheManager.Set(Name, source);
-            sourceCacheManager.Set(source.Id.ToString(), source);
-            return Mapper.Map<SourceDTO>(source);
-        }
-
         public SourceDTO AddFeeds(int Id, string Type)
         {
             var source = sourceRepository.GetSource(Id);
@@ -57,9 +48,13 @@ namespace Freeder.BLL.Services
             return null;
         }
 
-        public bool IsSourceValid(string sourceName, string url)
+        public SourceDTO AddSource(string Name, string Url)
         {
-            return sourceRepository.IsExist(sourceName, url); 
+            var source = sourceRepository.AddSource(Name, Url);
+            sourceRepository.Save();
+            sourceCacheManager.Set(Name, source);
+            sourceCacheManager.Set(source.Id.ToString(), source);
+            return Mapper.Map<SourceDTO>(source);
         }
 
         public bool IsSourceValid(int sourceId)
@@ -67,24 +62,18 @@ namespace Freeder.BLL.Services
             return sourceRepository.IsExist(sourceId);
         }
 
-        public SourceDTO GetSource(string sourceName, string url)
+        public bool IsSourceValid(string sourceName, string url)
         {
-            var source = sourceCacheManager.Get(sourceName+url);
-            if (source == null)
-            {
-                source = sourceRepository.GetSource(sourceName, url);
-                sourceCacheManager.Set(sourceName + url, source);
-            }
-            return Mapper.Map<SourceDTO>(source);
+            return sourceRepository.IsExist(sourceName, url);
         }
 
-        public SourceDTO GetSource(int Id)
+        public SourceDTO GetSource(int Id, bool withIncludes)
         {
-            var source = sourceCacheManager.Get(Id.ToString());
+            var source = sourceCacheManager.Get(Id.ToString(), withIncludes);
             if (source == null)
             {
                 source = sourceRepository.GetSource(Id);
-                sourceCacheManager.Set(Id.ToString(), source);
+                sourceCacheManager.Set(Id.ToString(), source, withIncludes);
             }
             return Mapper.Map<SourceDTO>(source);
         }
@@ -99,13 +88,6 @@ namespace Freeder.BLL.Services
             sourceRepository.DeleteSource(Id);
             sourceRepository.Save();
             sourceCacheManager.Remove(Id.ToString());
-        }
-
-        public void DeleteSource(string sourceName, string url)
-        {
-            sourceRepository.DeleteSource(sourceName, url);
-            sourceRepository.Save();
-            sourceCacheManager.Remove(sourceName);
         }
 
         public bool IsFeedTypeValid(string Type)

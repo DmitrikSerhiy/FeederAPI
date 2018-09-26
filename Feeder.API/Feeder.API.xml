@@ -72,6 +72,12 @@
             <param name="collectionName"></param>
             <returns></returns>
         </member>
+        <member name="M:Feeder.API.Controllers.HomeController.Welcome">
+            <summary>
+                Welcome Page
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Feeder.API.Controllers.SourceController">
             <summary>
                 Just for developers: becauce all the http methods returns Source entity without included feeeds
@@ -86,11 +92,12 @@
             <param name="LoggerFactory"></param>
             <param name="CacheManager"></param>
         </member>
-        <member name="M:Feeder.API.Controllers.SourceController.GetSourceById(System.Int32)">
+        <member name="M:Feeder.API.Controllers.SourceController.GetSourceById(System.Int32,System.Boolean)">
             <summary>
-                Get Source without feeds by Id
+                Get Source feeds by Id
             </summary>
             <param name="id"></param>
+            <param name="withIncludes">Get source with included feeds or not</param>
             <returns></returns>
         </member>
         <member name="M:Feeder.API.Controllers.SourceController.GetSources(System.Boolean)">

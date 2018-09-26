@@ -95,7 +95,7 @@ namespace Feeder.API.Controllers
             if (collection != null)
             {
                 logger.LogInformation($"Collection created: {collection.Name}");
-                return CreatedAtRoute("GetCollection", new { collectionName }, collection);
+                return CreatedAtRoute("GetCollection", new { collectionName, withIncludes = true }, collection);
             }
             return NotFound();
         }

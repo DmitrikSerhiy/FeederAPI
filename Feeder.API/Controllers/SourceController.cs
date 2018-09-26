@@ -58,15 +58,16 @@ namespace Feeder.API.Controllers
         //}
 
         /// <summary>
-        ///     Get Source without feeds by Id
+        ///     Get Source feeds by Id
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="withIncludes">Get source with included feeds or not</param>
         /// <returns></returns>
         [ResponseCache(Location = ResponseCacheLocation.Client, Duration = cacheExpiration)]
         [HttpGet("{id}", Name = "GetSourceById")]
-        public ActionResult GetSourceById(int id)
+        public ActionResult GetSourceById(int id, bool withIncludes = false)
         {
-            var source = sourceService.GetSource(id);
+            var source = sourceService.GetSource(id, withIncludes);
 
             if (source != null)
             {
@@ -110,7 +111,7 @@ namespace Feeder.API.Controllers
 
             var source = sourceService.AddFeeds(sourceId, type);
             if(source != null)
-                return CreatedAtRoute("GetSourceById", new { id = sourceId }, source);
+                return CreatedAtRoute("GetSourceById", new { id = sourceId, withIncludes = true }, source);
             return BadRequest();
         }
 
@@ -133,7 +134,7 @@ namespace Feeder.API.Controllers
             if (newSource != null)
             {
                 logger.LogInformation($"Source {newSource?.Name} with url {url} has been added");
-                return CreatedAtRoute("GetSourceById", new { id = newSource.Id }, newSource);
+                return CreatedAtRoute("GetSourceById", new { id = newSource.Id, withIncludes = true }, newSource);
             }
             return BadRequest();
         }

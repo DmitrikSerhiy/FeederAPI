@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "a5d4ef15-52db-4e84-9f22-db3146b8b759",
+		"name": "feederApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get source by id with feeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/sources/1?withIncludes=true",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"sources",
+						"1"
+					],
+					"query": [
+						{
+							"key": "withIncludes",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get source by id without feeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/sources/1?withIncludes=false",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"sources",
+						"1"
+					],
+					"query": [
+						{
+							"key": "withIncludes",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add source",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/sources?sourceName=The Washington Post&url=http://feeds.washingtonpost.com/rss/rss_wizards-insider",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"sources"
+					],
+					"query": [
+						{
+							"key": "sourceName",
+							"value": "The Washington Post"
+						},
+						{
+							"key": "url",
+							"value": "http://feeds.washingtonpost.com/rss/rss_wizards-insider"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all sources with feeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/sources?withIncludes=true",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"sources"
+					],
+					"query": [
+						{
+							"key": "withIncludes",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all sources without feeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/sources?withIncludes=false",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"sources"
+					],
+					"query": [
+						{
+							"key": "withIncludes",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete source",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/sources/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"sources",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add feeds for Source ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/sources/1008/RSS",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"sources",
+						"1008",
+						"RSS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all feeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/feeds",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"feeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get feed by name and url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/feeds/Comcast Beats Out Fox to Acquire Sky/Sat, 22 Sep 2018 17:50:24 EDT",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"feeds",
+						"Comcast Beats Out Fox to Acquire Sky",
+						"Sat, 22 Sep 2018 17:50:24 EDT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get feed by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/feeds/1054",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"feeds",
+						"1054"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get collection with includes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections/News?withIncludes=true\n",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections",
+						"News"
+					],
+					"query": [
+						{
+							"key": "withIncludes",
+							"value": "true\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get collection without includes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections/News?withIncludes=false\n",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections",
+						"News"
+					],
+					"query": [
+						{
+							"key": "withIncludes",
+							"value": "false\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get collections with includes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections?withIncludes=true\n",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections"
+					],
+					"query": [
+						{
+							"key": "withIncludes",
+							"value": "true\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get collections without includes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections?withIncludes=false\n",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections"
+					],
+					"query": [
+						{
+							"key": "withIncludes",
+							"value": "false\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add collection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections?collectionName=newCollection",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections"
+					],
+					"query": [
+						{
+							"key": "collectionName",
+							"value": "newCollection"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete collection",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections/newCollection",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections",
+						"newCollection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update collection name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections?collectionName=It&newName=ItColletion",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections"
+					],
+					"query": [
+						{
+							"key": "collectionName",
+							"value": "It"
+						},
+						{
+							"key": "newName",
+							"value": "ItColletion"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add source to collection",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections/News/The New Yourker",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections",
+						"News",
+						"The New Yourker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete source from collection",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44399/api/collections?collectionName=News&sourceName=mySource",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44399",
+					"path": [
+						"api",
+						"collections"
+					],
+					"query": [
+						{
+							"key": "collectionName",
+							"value": "News"
+						},
+						{
+							"key": "sourceName",
+							"value": "mySource"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

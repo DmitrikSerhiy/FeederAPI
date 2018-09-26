@@ -21,10 +21,6 @@ namespace Feeder.DAL.Repositories
             return feedContext.Sources.Add(new Source { Name = sourceName, Url = Url }).Entity;
         }
 
-        public Source GetSource(string sourceName, string url)
-        {
-            return feedContext.Sources.FirstOrDefault(s => s.Name == sourceName && s.Url == url);
-        }
 
         public List<Source> GetSources(bool withIncludes)
         {
@@ -42,14 +38,13 @@ namespace Feeder.DAL.Repositories
             return feedContext.Sources.Include(s => s.Feeds).Any(s => s.Feeds.Contains(feed));
         }
 
-        public bool IsExist(string sourceName, string url)
-        {
-            return feedContext.Sources.Any(s => s.Name == sourceName && s.Url == url);
-        }
-
         public bool IsExist(int sourceId)
         {
             return feedContext.Sources.Any(s => s.Id == sourceId);
+        }
+        public bool IsExist(string sourceName, string url)
+        {
+            return feedContext.Sources.Any(s => s.Name == sourceName && s.Url == url);
         }
 
         public void Save()
@@ -59,7 +54,7 @@ namespace Feeder.DAL.Repositories
 
         public bool HasFeed(int sourceId, string feedTitle)
         {
-            return feedContext.Sources.Include(f => f.Feeds).Where(s => s.Id == sourceId).Any(f => f.Name == feedTitle);
+            return feedContext.Feeds.First(c => c.Title == feedTitle).SourceId == sourceId;
         }
         
         public void Dispose()
@@ -70,12 +65,6 @@ namespace Feeder.DAL.Repositories
         public void DeleteSource(int sourceId)
         {
             var source = feedContext.Sources.FirstOrDefault(s => s.Id == sourceId);
-            feedContext.Sources.Remove(source);
-        }
-
-        public void DeleteSource(string sourceName, string url)
-        {
-            var source = feedContext.Sources.FirstOrDefault(s => s.Name == sourceName && s.Url == url);
             feedContext.Sources.Remove(source);
         }
 
